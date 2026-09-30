@@ -1,0 +1,238 @@
+@import "tailwindcss";
+@source "../**";
+
+@theme {
+  --color-brand-dark: #0f3b27;
+  --color-brand-darker: #082015;
+  --color-brand-surface: #144d34;
+  --color-brand-lime: #92ff5f;
+  --color-brand-light: #f7f9f7;
+  --color-brand-orange: #ff7036;
+  --color-brand-ice: #bff2f0;
+  --color-brand-mint: #cff1d2;
+  --color-brand-muted: #52796f;
+  --color-brand-text: #0f3b27;
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --radius-2xl: 40px;
+  --radius-full: 9999px;
+}
+
+:root {
+  --background: 120 14% 97%;
+  --foreground: 153 59% 15%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 153 59% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 153 59% 15%;
+
+  --primary: 153 59% 15%;
+  --primary-foreground: 101 100% 68%;
+
+  --secondary: 125 54% 88%;
+  --secondary-foreground: 153 59% 15%;
+
+  --muted: 153 20% 92%;
+  --muted-foreground: 165 19% 38%;
+
+  --accent: 101 100% 68%;
+  --accent-foreground: 153 59% 15%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 153 25% 85%;
+  --input: 153 25% 85%;
+  --ring: 101 100% 68%;
+
+  --radius: 0.75rem;
+
+  --bg-light: #f7f9f7;
+  --bg-dark: #0f3b27;
+  --bg-darker: #082015;
+  --color-lime: #92ff5f;
+  --color-orange: #ff7036;
+  --color-ice: #bff2f0;
+  --color-mint: #cff1d2;
+}
+
+body {
+  background-color: #f7f9f7;
+  color: #0f3b27;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f9f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f3b27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #92ff5f;
+}
+
+/* Bento Card Presets */
+.bento-card-light {
+  background: #ffffff;
+  color: #0f3b27;
+  border: 1px solid rgba(15, 59, 39, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(15, 59, 39, 0.08);
+}
+
+.bento-card-mint {
+  background: #cff1d2;
+  color: #0f3b27;
+  border: 1px solid rgba(15, 59, 39, 0.15);
+}
+
+.bento-card-ice {
+  background: #bff2f0;
+  color: #0f3b27;
+  border: 1px solid rgba(15, 59, 39, 0.15);
+}
+
+.bento-card-dark {
+  background: #0f3b27;
+  color: #f7f9f7;
+  border: 1px solid rgba(146, 255, 95, 0.2);
+}
+
+.bento-card-darker {
+  background: #082015;
+  color: #f7f9f7;
+  border: 1px solid rgba(191, 242, 240, 0.15);
+}
+
+.lime-pill {
+  background-color: #92ff5f;
+  color: #0f3b27;
+}
+
+.orange-pill {
+  background-color: #ff7036;
+  color: #ffffff;
+}
+
+/* 3D Card Fan Carousel Layout & Cards */
+.fan-layout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .fan-layout {
+    height: 18rem;
+  }
+}
+@media (min-width: 768px) {
+  .fan-layout {
+    height: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fan-layout {
+    height: 22rem;
+  }
+}
+@media (min-width: 1280px) {
+  .fan-layout {
+    height: 24rem;
+  }
+}
+
+.fan-card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 8rem;
+  height: 11.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 24px -6px rgba(15, 59, 39, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background-color: #0f3b27;
+  cursor: pointer;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+  user-select: none;
+}
+@media (min-width: 640px) {
+  .fan-card {
+    width: 10rem;
+    height: 14rem;
+    border-radius: 1.15rem;
+  }
+}
+@media (min-width: 768px) {
+  .fan-card {
+    width: 11.5rem;
+    height: 16rem;
+    border-radius: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fan-card {
+    width: 13rem;
+    height: 18rem;
+    border-radius: 1.35rem;
+    border-width: 2.5px;
+  }
+}
+@media (min-width: 1280px) {
+  .fan-card {
+    width: 14.5rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    border-width: 2.5px;
+  }
+}
