@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://rupkothatravels.com";
-  const lastModified = new Date();
+  const lastModified = new Date("2026-04-01");
 
   return [
     {
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/fixed-departures`,
       lastModified,
       changeFrequency: "daily",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/destinations`,
@@ -33,13 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/customizable-circuits`,
       lastModified,
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/about`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.75,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/booking`,
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/policies`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.75,
     },
   ];
 }

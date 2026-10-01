@@ -108,8 +108,8 @@ export default function TourModal({
 Please confirm availability and booking formalities.`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-4xl max-h-[92vh] bg-[#0B192C] border border-[#C5A880]/40 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#081426]/90 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-4xl max-h-[92vh] bg-[#0B192C] border border-[#F59E0B]/30 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
         {/* Top Header Banner */}
         <div className="relative h-48 sm:h-56 w-full shrink-0">
           <img
@@ -117,12 +117,12 @@ Please confirm availability and booking formalities.`;
             alt={packageData.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/60 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/60 to-[#081426]/70" />
 
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-white hover:text-[#C5A880] border border-white/20 transition-all z-20"
+            className="absolute top-4 right-4 p-2 rounded-full bg-[#081426]/80 text-white hover:text-[#F59E0B] border border-white/20 transition-all z-20"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -130,7 +130,7 @@ Please confirm availability and booking formalities.`;
 
           {/* Title & Info over banner */}
           <div className="absolute bottom-4 left-6 right-6">
-            <div className="flex items-center gap-2 text-xs text-[#E0A96D] font-medium mb-1">
+            <div className="flex items-center gap-2 text-xs text-[#F59E0B] font-bold mb-1">
               <MapPin className="w-3.5 h-3.5" />
               <span>{packageData.countries}</span>
             </div>
@@ -138,15 +138,15 @@ Please confirm availability and booking formalities.`;
               {packageData.title}
             </h2>
             <div className="flex flex-wrap items-center gap-3 text-xs text-white/90 mt-2">
-              <span className="flex items-center gap-1 text-[#C5A880] font-medium">
+              <span className="flex items-center gap-1 text-[#F59E0B] font-medium">
                 <Clock className="w-3.5 h-3.5" /> {packageData.duration}
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-[#E0A96D] font-medium">
+              <span className="flex items-center gap-1 text-[#FEF3C7] font-medium">
                 <Calendar className="w-3.5 h-3.5" /> Next DOJ: {packageData.nextDeparture}
               </span>
               <span>•</span>
-              <span className="font-bold text-[#F5E6CA] text-sm">
+              <span className="font-bold text-[#F59E0B] text-sm">
                 ₹{packageData.twinRate.toLocaleString("en-IN")} / Person (Twin Sharing)
               </span>
             </div>
@@ -154,12 +154,12 @@ Please confirm availability and booking formalities.`;
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex border-b border-white/10 bg-[#060D17]/90 px-6 shrink-0 overflow-x-auto">
+        <div className="flex border-b border-white/10 bg-[#0B192C]/90 px-6 shrink-0 overflow-x-auto">
           <button
             onClick={() => setActiveTab("itinerary")}
             className={`py-3 px-4 text-xs sm:text-sm font-semibold border-b-2 whitespace-nowrap transition-all ${
               activeTab === "itinerary"
-                ? "border-[#C5A880] text-[#E0A96D]"
+                ? "border-[#F59E0B] text-[#F59E0B]"
                 : "border-transparent text-[#94A3B8] hover:text-white"
             }`}
           >
@@ -169,7 +169,7 @@ Please confirm availability and booking formalities.`;
             onClick={() => setActiveTab("inclusions")}
             className={`py-3 px-4 text-xs sm:text-sm font-semibold border-b-2 whitespace-nowrap transition-all ${
               activeTab === "inclusions"
-                ? "border-[#C5A880] text-[#E0A96D]"
+                ? "border-[#F59E0B] text-[#F59E0B]"
                 : "border-transparent text-[#94A3B8] hover:text-white"
             }`}
           >
@@ -179,7 +179,7 @@ Please confirm availability and booking formalities.`;
             onClick={() => setActiveTab("pricing")}
             className={`py-3 px-4 text-xs sm:text-sm font-semibold border-b-2 whitespace-nowrap transition-all ${
               activeTab === "pricing"
-                ? "border-[#C5A880] text-[#E0A96D]"
+                ? "border-[#F59E0B] text-[#F59E0B]"
                 : "border-transparent text-[#94A3B8] hover:text-white"
             }`}
           >
@@ -189,7 +189,7 @@ Please confirm availability and booking formalities.`;
             onClick={() => setActiveTab("book")}
             className={`py-3 px-4 text-xs sm:text-sm font-semibold border-b-2 whitespace-nowrap transition-all ${
               activeTab === "book"
-                ? "border-[#C5A880] text-[#E0A96D]"
+                ? "border-[#F59E0B] text-[#F59E0B]"
                 : "border-transparent text-[#94A3B8] hover:text-white"
             }`}
           >
@@ -201,20 +201,20 @@ Please confirm availability and booking formalities.`;
         <div className="p-6 overflow-y-auto flex-1 space-y-6">
           {activeTab === "itinerary" && (
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-[#060D17]/80 border border-[#C5A880]/30 text-xs">
-                <span className="font-bold text-[#E0A96D] block mb-1">Covering Sightseeing Places:</span>
+              <div className="p-4 rounded-xl bg-[#0B192C]/80 border border-[#F59E0B]/30 text-xs">
+                <span className="font-bold text-[#F59E0B] block mb-1">Covering Sightseeing Places:</span>
                 <p className="text-white/80 leading-relaxed font-light">{packageData.coveringPlaces}</p>
-                <span className="font-semibold text-[#C5A880] block mt-2">🏨 Night Stay Breakdown: {packageData.nightStay}</span>
+                <span className="font-semibold text-[#FEF3C7] block mt-2">🏨 Night Stay Breakdown: {packageData.nightStay}</span>
               </div>
 
               <div className="space-y-3">
                 {packageData.itinerary.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-[#060D17]/60 border border-white/10 hover:border-[#C5A880]/40 transition-colors"
+                    className="p-4 rounded-xl bg-[#0B192C]/60 border border-white/10 hover:border-[#F59E0B]/40 transition-colors"
                   >
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#1E3E62] text-[#E0A96D] font-mono text-xs font-bold">
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#1E3E62] text-[#F59E0B] font-mono text-xs font-bold">
                         {item.day}
                       </span>
                       <h4 className="font-serif font-bold text-white text-base">
@@ -234,24 +234,24 @@ Please confirm availability and booking formalities.`;
             <div className="space-y-6">
               <div>
                 <h4 className="font-serif text-lg font-bold text-white mb-3 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#E0A96D]" />
+                  <ShieldCheck className="w-5 h-5 text-[#F59E0B]" />
                   What is Included (From Official PDF Specs)
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {packageData.inclusions.map((inc, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2.5 p-3 rounded-xl bg-[#060D17]/50 border border-white/10 text-xs sm:text-sm text-white/90"
+                      className="flex items-center gap-2.5 p-3 rounded-xl bg-[#0B192C]/50 border border-white/10 text-xs sm:text-sm text-white/90"
                     >
-                      <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#F59E0B] shrink-0" />
                       <span>{inc}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#060D17] border border-white/10 space-y-3">
-                <h4 className="font-bold text-[#E0A96D] text-xs uppercase tracking-wider">
+              <div className="p-4 rounded-xl bg-[#0B192C] border border-white/10 space-y-3">
+                <h4 className="font-bold text-[#F59E0B] text-xs uppercase tracking-wider">
                   Cancellation Policy (Strictly as per PDF)
                 </h4>
                 <ul className="text-xs text-white/80 space-y-1.5 font-light">
@@ -263,8 +263,8 @@ Please confirm availability and booking formalities.`;
                 </ul>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#1E3E62]/30 border border-[#C5A880]/30 space-y-2">
-                <div className="flex items-center gap-2 text-[#E0A96D] text-sm font-semibold">
+              <div className="p-4 rounded-xl bg-[#1E3E62]/30 border border-[#F59E0B]/30 space-y-2">
+                <div className="flex items-center gap-2 text-[#F59E0B] text-sm font-semibold">
                   <Sparkles className="w-4 h-4" />
                   <span>The Rupkotha Assurance</span>
                 </div>
@@ -277,9 +277,9 @@ Please confirm availability and booking formalities.`;
 
           {activeTab === "pricing" && (
             <div className="space-y-6">
-              <div className="p-5 rounded-2xl bg-[#060D17] border border-[#C5A880]/40 space-y-4">
+              <div className="p-5 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/40 space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                  <div className="flex items-center gap-2 text-[#E0A96D] font-bold text-sm">
+                  <div className="flex items-center gap-2 text-[#F59E0B] font-bold text-sm">
                     <Calculator className="w-4 h-4" />
                     <span>Transparent Cost Calculator (PDF Rates)</span>
                   </div>
@@ -290,7 +290,7 @@ Please confirm availability and booking formalities.`;
                   {/* Adults */}
                   <div className="flex flex-col gap-1.5 bg-[#0B192C] p-3 rounded-xl border border-white/10">
                     <label className="text-xs text-white font-medium">Adults (Twin Sharing)</label>
-                    <span className="text-[11px] text-[#E0A96D] font-mono">₹{packageData.twinRate.toLocaleString("en-IN")} / head</span>
+                    <span className="text-[11px] text-[#F59E0B] font-mono">₹{packageData.twinRate.toLocaleString("en-IN")} / head</span>
                     <div className="flex items-center gap-3 mt-1">
                       <button
                         type="button"
@@ -313,7 +313,7 @@ Please confirm availability and booking formalities.`;
                   {/* Extra Person */}
                   <div className="flex flex-col gap-1.5 bg-[#0B192C] p-3 rounded-xl border border-white/10">
                     <label className="text-xs text-white font-medium">Extra Person (Triple)</label>
-                    <span className="text-[11px] text-[#E0A96D] font-mono">₹{packageData.extraRate.toLocaleString("en-IN")} / head</span>
+                    <span className="text-[11px] text-[#F59E0B] font-mono">₹{packageData.extraRate.toLocaleString("en-IN")} / head</span>
                     <div className="flex items-center gap-3 mt-1">
                       <button
                         type="button"
@@ -336,7 +336,7 @@ Please confirm availability and booking formalities.`;
                   {/* Child */}
                   <div className="flex flex-col gap-1.5 bg-[#0B192C] p-3 rounded-xl border border-white/10">
                     <label className="text-xs text-white font-medium">Child ({packageData.childAgeLimit || "Under 8 yrs"})</label>
-                    <span className="text-[11px] text-[#E0A96D] font-mono">
+                    <span className="text-[11px] text-[#F59E0B] font-mono">
                       ₹{(packageData.childRate || Math.round(packageData.twinRate * 0.65)).toLocaleString("en-IN")} / head
                     </span>
                     <div className="flex items-center gap-3 mt-1">
@@ -361,13 +361,13 @@ Please confirm availability and booking formalities.`;
 
                 {/* Extra Service Options */}
                 <div className="pt-2 border-t border-white/10 space-y-2">
-                  <span className="text-xs font-semibold text-[#C5A880] block">Optional Upgrades from Page 5:</span>
+                  <span className="text-xs font-semibold text-[#F59E0B] block">Optional Upgrades:</span>
                   <label className="flex items-center gap-2.5 text-xs text-white/90 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={addAcTrain}
                       onChange={(e) => setAddAcTrain(e.target.checked)}
-                      className="rounded accent-[#C5A880] w-4 h-4"
+                      className="rounded accent-[#F59E0B] w-4 h-4"
                     />
                     <span>Upgrade to 2AC / 3AC Train Ticket (+₹2,500 / person difference)</span>
                   </label>
@@ -376,7 +376,7 @@ Please confirm availability and booking formalities.`;
                       type="checkbox"
                       checked={addAcRoom}
                       onChange={(e) => setAddAcRoom(e.target.checked)}
-                      className="rounded accent-[#C5A880] w-4 h-4"
+                      className="rounded accent-[#F59E0B] w-4 h-4"
                     />
                     <span>AC Room Upgrade (+₹2,000 / room difference)</span>
                   </label>
@@ -385,14 +385,14 @@ Please confirm availability and booking formalities.`;
                       type="checkbox"
                       checked={addExclusiveCar}
                       onChange={(e) => setAddExclusiveCar(e.target.checked)}
-                      className="rounded accent-[#C5A880] w-4 h-4"
+                      className="rounded accent-[#F59E0B] w-4 h-4"
                     />
                     <span>Exclusive Private SUV Car for Family (+₹12,000 lump-sum)</span>
                   </label>
                 </div>
 
                 {/* Calculation Summary */}
-                <div className="p-4 rounded-xl bg-[#0B192C] border border-[#C5A880]/30 space-y-2 text-xs">
+                <div className="p-4 rounded-xl bg-[#0B192C] border border-[#F59E0B]/30 space-y-2 text-xs">
                   <div className="flex justify-between text-white/80">
                     <span>Base Tariff Subtotal:</span>
                     <span className="font-mono">₹{subtotal.toLocaleString("en-IN")}</span>
@@ -401,16 +401,16 @@ Please confirm availability and booking formalities.`;
                     <span>GST (5%):</span>
                     <span className="font-mono">₹{gstAmount.toLocaleString("en-IN")}</span>
                   </div>
-                  <div className="pt-2 border-t border-white/10 flex justify-between items-center text-sm font-bold text-[#E0A96D]">
+                  <div className="pt-2 border-t border-white/10 flex justify-between items-center text-sm font-bold text-[#F59E0B]">
                     <span>Estimated Total Tour Cost:</span>
-                    <span className="font-serif text-lg text-[#F5E6CA]">₹{grandTotal.toLocaleString("en-IN")}</span>
+                    <span className="font-serif text-lg text-[#FEF3C7]">₹{grandTotal.toLocaleString("en-IN")}</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => setActiveTab("book")}
-                    className="flex-1 py-3 rounded-full text-xs font-bold text-[#0B192C] bg-gradient-to-r from-[#F5E6CA] via-[#C5A880] to-[#E0A96D]"
+                    className="flex-1 py-3 rounded-full text-xs font-bold text-[#0B192C] bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-md"
                   >
                     Proceed with this Quotation →
                   </button>
@@ -418,9 +418,9 @@ Please confirm availability and booking formalities.`;
                     href={`https://wa.me/919830012345?text=${encodeURIComponent(whatsAppText)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-3 rounded-full bg-emerald-700/80 hover:bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-emerald-500/40"
+                    className="px-5 py-3 rounded-full bg-[#0B192C] hover:bg-[#1E3E62] text-white text-xs font-semibold flex items-center justify-center gap-2 border border-[#F59E0B]/40"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <MessageCircle className="w-4 h-4 text-[#F59E0B]" />
                     <span>Send on WhatsApp</span>
                   </a>
                 </div>
@@ -430,56 +430,56 @@ Please confirm availability and booking formalities.`;
 
           {activeTab === "book" && (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="p-3 rounded-xl bg-[#1E3E62]/30 border border-[#C5A880]/30 text-xs text-[#E0A96D] flex items-center gap-2">
+              <div className="p-3 rounded-xl bg-[#1E3E62]/30 border border-[#F59E0B]/30 text-xs text-[#F59E0B] flex items-center gap-2">
                 <Sparkles className="w-4 h-4 shrink-0" />
                 <span>Selected: <strong>{packageData.title}</strong> — Est. Cost: <strong>₹{grandTotal.toLocaleString("en-IN")}</strong> (incl. GST)</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-[#C5A880]">Full Name *</label>
+                  <label className="text-xs font-medium text-[#F59E0B]">Full Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Sourav Mukherjee"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F59E0B]"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-[#C5A880]">Contact Phone / WhatsApp *</label>
+                  <label className="text-xs font-medium text-[#F59E0B]">Contact Phone / WhatsApp *</label>
                   <input
                     type="tel"
                     required
                     placeholder="+91 98300 XXXXX"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F59E0B]"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-[#C5A880]">Email Address</label>
+                  <label className="text-xs font-medium text-[#F59E0B]">Email Address</label>
                   <input
                     type="email"
                     placeholder="sourav@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F59E0B]"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-[#C5A880]">Preferred Departure Date</label>
+                  <label className="text-xs font-medium text-[#F59E0B]">Preferred Departure Date</label>
                   <select
                     value={departureDate}
                     onChange={(e) => setDepartureDate(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F59E0B]"
                   >
                     {packageData.allDates.map((date) => (
-                      <option key={date} value={date} className="bg-[#060D17]">
+                      <option key={date} value={date} className="bg-[#0B192C]">
                         {date}
                       </option>
                     ))}
@@ -491,7 +491,7 @@ Please confirm availability and booking formalities.`;
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full sm:flex-1 py-3.5 rounded-full font-bold text-sm text-[#0B192C] bg-gradient-to-r from-[#F5E6CA] via-[#C5A880] to-[#E0A96D] hover:scale-102 active:scale-98 transition-all"
+                  className="w-full sm:flex-1 py-3.5 rounded-full font-bold text-sm text-[#0B192C] bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 hover:scale-102 active:scale-98 transition-all"
                 >
                   {submitting ? "Sending Request..." : "Confirm Booking Inquiry"}
                 </button>
@@ -500,9 +500,9 @@ Please confirm availability and booking formalities.`;
                   href={`https://wa.me/919830012345?text=${encodeURIComponent(whatsAppText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-5 py-3.5 rounded-full bg-emerald-700/80 hover:bg-emerald-600 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-emerald-500/40"
+                  className="w-full sm:w-auto px-5 py-3.5 rounded-full bg-[#0B192C] hover:bg-[#1E3E62] text-white text-xs font-semibold flex items-center justify-center gap-2 border border-[#F59E0B]/40"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4 text-[#F59E0B]" />
                   <span>Instant WhatsApp</span>
                 </a>
               </div>
@@ -511,14 +511,14 @@ Please confirm availability and booking formalities.`;
         </div>
 
         {/* Footer Actions */}
-        <div className="p-4 bg-[#060D17] border-t border-white/10 flex items-center justify-between text-xs text-[#94A3B8] shrink-0">
+        <div className="p-4 bg-[#0B192C] border-t border-white/10 flex items-center justify-between text-xs text-[#94A3B8] shrink-0">
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-[#E0A96D]" />
+            <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
             Official Booking Desk: Kolkata (Howrah / Sealdah Departures)
           </span>
           <button
             onClick={() => setActiveTab("book")}
-            className="text-[#E0A96D] hover:underline font-semibold"
+            className="text-[#F59E0B] hover:underline font-semibold"
           >
             {activeTab !== "book" ? "Request Call Back →" : ""}
           </button>

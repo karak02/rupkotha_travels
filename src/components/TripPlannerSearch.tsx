@@ -50,7 +50,7 @@ export default function TripPlannerSearch({
   ];
 
   return (
-    <section id="planner" className="relative z-30 -mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="planner" className="relative z-30 -mt-12 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       <div className="bg-[#0B192C]/95 backdrop-blur-xl border border-[#C5A880]/30 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/80">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
           <div>
@@ -83,10 +83,10 @@ export default function TripPlannerSearch({
               value={selectedRegion}
               onChange={(e) => onSelectRegion(e.target.value)}
               aria-label="Filter by destination region"
-              className="w-full bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
+              className="w-full bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
             >
               {regions.map((r) => (
-                <option key={r} value={r} className="bg-[#060D17] text-white">
+                <option key={r} value={r} className="bg-[#0B192C] text-white">
                   {r}
                 </option>
               ))}
@@ -103,10 +103,10 @@ export default function TripPlannerSearch({
               value={selectedMonth}
               onChange={(e) => onSelectMonth(e.target.value)}
               aria-label="Filter by departure month"
-              className="w-full bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
+              className="w-full bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
             >
               {months.map((m) => (
-                <option key={m} value={m} className="bg-[#060D17] text-white">
+                <option key={m} value={m} className="bg-[#0B192C] text-white">
                   {m}
                 </option>
               ))}
@@ -123,10 +123,10 @@ export default function TripPlannerSearch({
               value={selectedStyle}
               onChange={(e) => onSelectStyle(e.target.value)}
               aria-label="Filter by travel format"
-              className="w-full bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
+              className="w-full bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] transition-colors"
             >
               {styles.map((s) => (
-                <option key={s} value={s} className="bg-[#060D17] text-white">
+                <option key={s} value={s} className="bg-[#0B192C] text-white">
                   {s}
                 </option>
               ))}

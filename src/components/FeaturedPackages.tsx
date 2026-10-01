@@ -587,7 +587,7 @@ export default function FeaturedPackages({
       : TOURS_DATA.filter((t) => t.region === selectedRegion);
 
   return (
-    <section id="packages" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="packages" className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
@@ -625,20 +625,20 @@ export default function FeaturedPackages({
                 alt={pkg.title}
                 className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-[#0B192C]/50" />
 
               {pkg.badge && (
-                <span className="absolute top-4 left-4 z-10 text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-[#C5A880] text-[#0B192C] shadow-md">
+                <span className="absolute top-4 left-4 z-10 text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-[#F59E0B] text-[#0B192C] shadow-md">
                   {pkg.badge}
                 </span>
               )}
 
               <div className="absolute bottom-3 left-4 right-4 z-10 flex items-center justify-between text-xs text-white/90">
-                <span className="flex items-center gap-1 bg-[#060D17]/85 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10 font-medium">
-                  <Clock className="w-3.5 h-3.5 text-[#E0A96D]" />
+                <span className="flex items-center gap-1 bg-[#0B192C]/90 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10 font-medium">
+                  <Clock className="w-3.5 h-3.5 text-[#F59E0B]" />
                   {pkg.duration}
                 </span>
-                <span className="flex items-center gap-1 bg-[#060D17]/85 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10 font-medium text-[#E0A96D]">
+                <span className="flex items-center gap-1 bg-[#0B192C]/90 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10 font-medium text-[#F59E0B]">
                   <Calendar className="w-3.5 h-3.5" />
                   {pkg.nextDeparture}
                 </span>
@@ -648,16 +648,16 @@ export default function FeaturedPackages({
             {/* Content Body */}
             <div className="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-1.5 text-xs text-[#E0A96D] font-medium mb-1.5">
+                <div className="flex items-center gap-1.5 text-xs text-[#F59E0B] font-medium mb-1.5">
                   <MapPin className="w-3.5 h-3.5 shrink-0" />
                   <span className="line-clamp-1">{pkg.countries}</span>
                 </div>
 
-                <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#C5A880] transition-colors leading-snug mb-2">
+                <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#F59E0B] transition-colors leading-snug mb-2">
                   {pkg.title}
                 </h3>
 
-                <p className="text-[11px] text-[#94A3B8] line-clamp-1 font-mono mb-3 bg-[#060D17]/60 p-1.5 rounded border border-white/5">
+                <p className="text-[11px] text-[#94A3B8] line-clamp-1 font-mono mb-3 bg-[#0B192C]/80 p-1.5 rounded border border-white/5">
                   🏨 {pkg.nightStay}
                 </p>
 

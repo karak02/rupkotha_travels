@@ -1,0 +1,97 @@
+# Rupkotha Travels (রূপকথা ট্রাভেলস) — Complete Knowledge Base & Services Spec
+
+> Comprehensive operational, pricing, destination, and policy data for Rupkotha Travels, Kolkata's premier experiential tour operator and authorized government tourism booking agent for Eco Tour Odisha and Chhattisgarh Tourism.
+
+---
+
+## 1. Company Profile & Official Entity Information
+- **Brand Name**: Rupkotha Travels (রূপকথা ট্রাভেলস)
+- **Legal Registration & Entity**: Registered Tour Operator in West Bengal, India
+- **Headquarters / Desk**: Kolkata Hub (Serving Howrah, Sealdah, Shalimar, Kolkata Terminal)
+- **Official Credentials**: Authorized Booking Agent for Eco Tour Odisha & Chhattisgarh Tourism Board
+- **Website**: https://rupkothatravels.com
+- **Official Email**: booking@rupkothatravels.com
+- **WhatsApp Concierge**: +91 98300 12345
+- **Operating Hours**: Monday through Saturday, 10:00 AM – 7:30 PM IST
+
+---
+
+## 2. Core Service Offerings & Fixed Departures (2026–2027)
+
+### 2.1 Tadoba Tiger Reserve Wildlife Safari
+- **Category**: Type 3 (Eco-Forest Safari)
+- **Duration**: 5 Nights & 6 Days (3 Nights Moharli)
+- **Departure Date**: 21st December 2026
+- **Pricing**: Twin Sharing ₹20,900/- | Extra Adult ₹17,500/-
+- **Inclusions**: 3 Core Safaris + 1 Buffer Safari, AC Jungle Resort, 4 daily meals, station transfers.
+
+### 2.2 Rajasthan Grand Heritage
+- **Category**: Type 1 (Cultural & Royal Heritage)
+- **Duration**: 12 Nights & 13 Days
+- **Route**: Jaipur (2N), Pushkar (1N), Udaipur (2N), Mount Abu (1N), Jodhpur (1N), Bikaner (1N), Jaisalmer (2N)
+- **Departure Date**: 18th December 2026
+- **Pricing**: Twin Sharing ₹29,900/- | Extra Adult ₹25,900/- | Child (6–11 yrs) ₹16,900/-
+- **Inclusions**: Sleeper train tickets from Howrah, dedicated MUV fleet, all meals, fort tours, Sam Sand dunes camp.
+
+### 2.3 Koraput & Bastar Tribal Circuit (Chitrakote & Jagdalpur)
+- **Category**: Type 1 (Tribal Heritage & Eco-Tour)
+- **Duration**: 7 Nights & 8 Days (Koraput 2N, Chitrakote 2N, Jagdalpur 1N)
+- **Departure Dates**: 20th September 2026, 22nd November 2026
+- **Pricing**: Twin Sharing ₹23,900/- | Extra Adult ₹19,900/- | Child (6–11 yrs) ₹13,900/-
+- **Inclusions**: Sleeper train tickets from Howrah, Chitrakote Falls, Kanger Valley limestone caves, Deomali peak, Eco Tour Odisha facilitation.
+
+### 2.4 Bastar Tribal Dussehra Festival
+- **Category**: Type 1 (Tribal Festival)
+- **Duration**: 7 Nights & 8 Days (Jagdalpur 3N, Chitrakote 2N)
+- **Departure Date**: 18th October 2026 (Bastar Dussehra Festival)
+- **Pricing**: Twin Sharing ₹24,500/- | Extra Adult ₹20,500/-
+- **Inclusions**: 75-day World Famous Dussehra chariot rituals, Gond tribal arts, Tirathgarh waterfall.
+
+### 2.5 Sandakphu Singalila Himalayan Ridge Trek
+- **Category**: Type 2 (Himalayan Ridge Trek)
+- **Duration**: 6 Nights & 7 Days
+- **Route**: Manebhanjan (1N), Tumling (1N), Kalipokhri (1N), Sandakphu (2N), Srikhola (1N)
+- **Departure Dates**: 14th November 2026, 10th April 2027
+- **Pricing**: Twin Sharing ₹18,500/- | Extra Adult ₹16,200/-
+- **Inclusions**: Vintage Land Rover 4x4 or guided trek, Singalila permits, Sleeping Buddha views (Everest & Kanchenjunga).
+
+### 2.6 Spiti Valley Trans-Himalayan Road Trip
+- **Category**: Type 2 (High-Altitude Expeditions)
+- **Duration**: 9 Nights & 10 Days
+- **Route**: Shimla (1N), Kalpa (1N), Kaza (3N), Chandratal (1N), Manali (2N)
+- **Departure Dates**: 12th June 2026, 18th September 2026
+- **Pricing**: Twin Sharing ₹31,900/- | Extra Adult ₹27,500/-
+- **Inclusions**: Kunzum Pass, Chandratal Lake camping, Key Monastery, Komic (world's highest village), medical oxygen, experienced mountain drivers.
+
+### 2.7 Hornbill Festival & Nagaland Tribal Odyssey
+- **Category**: Type 1 (Tribal Festival & Cultural)
+- **Duration**: 6 Nights & 7 Days (Dimapur 1N, Kohima 3N, Khonoma 1N)
+- **Departure Date**: 1st December 2026
+- **Pricing**: Twin Sharing ₹28,900/- | Extra Adult ₹24,900/-
+- **Highlights**: Kisama Heritage Village Hornbill Festival, 16 Naga tribal dances, Khonoma Green Village.
+
+### 2.8 Sundarbans Mangrove Delta Cruise
+- **Category**: Type 3 (Mangrove Delta Safari)
+- **Duration**: 2 Nights & 3 Days (Every Friday Departure)
+- **Pricing**: Twin Sharing ₹8,500/- | Extra Adult ₹7,200/-
+- **Highlights**: Motor launch cruise, Sajnekhali, Sudhanyakhali, Dobanki canopy walk, Royal Bengal tiger habitat.
+
+---
+
+## 3. Bespoke Private Circuits
+
+### 3.1 Ladakh Tailored Expeditions (LAD 01 – LAD 08)
+- Comprehensive MAP meal plan (Breakfast & Dinner), private Innova/Scorpio/Tempo, Leh acclimatization day, oxygen kits, Inner Line Permits.
+- Key circuits include Pangong Tso, Nubra Valley sand dunes, Siachen Base Camp, Hanle Dark Sky Reserve, and Zanskar Valley.
+
+### 3.2 Andaman Aqua Paradise (AND 01 – AND 05)
+- Port Blair Cellular Jail, Havelock Island (Radhanagar Beach & Elephant Beach snorkeling), Neil Island (coral reefs & natural bridge), high-speed catamaran ferries (Makruzz/Green Ocean).
+
+---
+
+## 4. Operational Standards & Logistics
+
+1. **Train Travel**: All fixed departures include Non-AC 3-Tier Sleeper train tickets from Sealdah / Howrah / Kolkata stations with luggage porter assistance. 3AC upgrades available.
+2. **Ground Fleet**: Scorpio, Bolero, Innova, Xylo, 13-seater and 17-seater Tempo Travellers with mountain-trained drivers.
+3. **Daily Catering**: 4 hot meals daily (Bed tea, breakfast, lunch, evening snacks & tea, dinner) with fresh local ingredients.
+4. **Cancellation Terms**: 60+ days before departure: 10% deduction; 45–59 days: 30% deduction; 30–44 days: 40% deduction; 15–29 days: 60% deduction; <15 days: No refund.

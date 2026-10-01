@@ -10,9 +10,9 @@ export default function TourPillarsSection() {
   const cardThemes = [
     {
       cardBg: "bg-[#0B192C] text-[#F8F9FA] border-[#F59E0B]/30",
-      pillBg: "bg-[#F59E0B] text-[#060D17]",
-      subBg: "bg-[#060D17] border-[#F59E0B]/20 text-white/90",
-      btnBg: "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 hover:from-amber-300 hover:to-amber-400",
+      pillBg: "bg-[#F59E0B] text-[#0B192C]",
+      subBg: "bg-[#081426] border-[#F59E0B]/20 text-white/90",
+      btnBg: "bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] hover:from-amber-300 hover:to-amber-400",
     },
     {
       cardBg: "bg-[#FFFFFF] text-[#0B192C] border-[#0B192C]/10",
@@ -29,7 +29,7 @@ export default function TourPillarsSection() {
   ];
 
   return (
-    <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20">
+    <section className="py-8 sm:py-10 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto relative z-20">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B192C] text-[#F59E0B] text-[11px] font-black uppercase tracking-wider mb-2 shadow-md border border-[#F59E0B]/30">
@@ -109,7 +109,7 @@ export default function TourPillarsSection() {
               </div>
 
               {/* Bottom CTA Link */}
-              <div className="mt-4 pt-3 border-t border-black/10 flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#0B192C]/10 flex items-center justify-between">
                 <span className="text-[11px] font-bold opacity-80">
                   {cat.packagesCount} Itineraries
                 </span>

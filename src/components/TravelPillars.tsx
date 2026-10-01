@@ -60,7 +60,7 @@ export default function TravelPillars() {
 
   return (
     <section id="why-rupkotha" className="py-20 bg-[#0B192C]/50 border-y border-[#C5A880]/20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#E0A96D] tracking-wider uppercase mb-2">
@@ -82,7 +82,7 @@ export default function TravelPillars() {
             return (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-[#060D17]/80 border border-[#C5A880]/25 hover:border-[#C5A880]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#C5A880]/10 flex flex-col justify-between"
+                className="p-8 rounded-2xl bg-[#0B192C]/80 border border-[#C5A880]/25 hover:border-[#C5A880]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#C5A880]/10 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -121,7 +121,7 @@ export default function TravelPillars() {
 
         {/* Cancellation Policy & Brochure Guarantee Monolith */}
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 p-6 sm:p-8 rounded-2xl bg-[#060D17] border border-[#C5A880]/30">
+          <div className="lg:col-span-2 p-6 sm:p-8 rounded-2xl bg-[#0B192C] border border-[#C5A880]/30">
             <h4 className="font-serif text-lg font-bold text-white mb-2 flex items-center gap-2">
               <FileCheck className="w-5 h-5 text-[#E0A96D]" />
               Official Cancellation & Refund Policy

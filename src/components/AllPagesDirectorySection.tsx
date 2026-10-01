@@ -58,7 +58,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
     theme: {
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/25 hover:border-amber-400/60",
-      badgeBg: "bg-[#060D17]",
+      badgeBg: "bg-[#0B192C]",
       badgeText: "text-amber-400",
       accent: "#F59E0B",
     },
@@ -108,7 +108,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
     theme: {
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/25 hover:border-amber-400/60",
-      badgeBg: "bg-[#060D17]",
+      badgeBg: "bg-[#0B192C]",
       badgeText: "text-amber-400",
       accent: "#F59E0B",
     },
@@ -133,7 +133,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
     theme: {
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/25 hover:border-amber-400/60",
-      badgeBg: "bg-[#060D17]",
+      badgeBg: "bg-[#0B192C]",
       badgeText: "text-amber-400",
       accent: "#F59E0B",
     },
@@ -158,7 +158,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
     theme: {
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/25 hover:border-amber-400/60",
-      badgeBg: "bg-[#060D17]",
+      badgeBg: "bg-[#0B192C]",
       badgeText: "text-amber-400",
       accent: "#F59E0B",
     },
@@ -184,7 +184,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/40 hover:border-amber-400",
       badgeBg: "bg-amber-500",
-      badgeText: "text-slate-950",
+      badgeText: "text-[#0B192C]",
       accent: "#F59E0B",
     },
   },
@@ -208,7 +208,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
     theme: {
       bg: "bg-[#0B111E]/95",
       border: "border-amber-500/25 hover:border-amber-400/60",
-      badgeBg: "bg-[#060D17]",
+      badgeBg: "bg-[#0B192C]",
       badgeText: "text-amber-400",
       accent: "#F59E0B",
     },
@@ -217,7 +217,7 @@ const ALL_PAGES_SUMMARY: PageSummaryCard[] = [
 
 export default function AllPagesDirectorySection() {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#060D17] text-[#F8F9FA] overflow-hidden">
+    <section className="relative py-20 px-6 sm:px-10 lg:px-16 xl:px-20 bg-[#0B192C] text-[#F8F9FA] overflow-hidden">
       {/* Topographic Contour Texture Overlay in Warm Amber */}
       <div
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
@@ -227,7 +227,7 @@ export default function AllPagesDirectorySection() {
           backgroundPosition: "0 0, 20px 20px",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#060D17] via-transparent to-[#060D17] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B192C] via-transparent to-[#0B192C] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -283,7 +283,7 @@ export default function AllPagesDirectorySection() {
                     >
                       Page {page.number}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#060D17]/85 backdrop-blur-md text-amber-300 text-[11px] font-black border border-white/10 shadow-md">
+                    <span className="px-3 py-1 rounded-full bg-[#0B192C]/85 backdrop-blur-md text-amber-300 text-[11px] font-black border border-white/10 shadow-md">
                       {page.stats.value}
                     </span>
                   </div>
@@ -326,7 +326,7 @@ export default function AllPagesDirectorySection() {
                   <div className="pt-3 border-t border-white/10">
                     <Link
                       href={page.href}
-                      className="w-full py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-between transition-all bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-[0_4px_15px_rgba(245,158,11,0.25)]"
+                      className="w-full py-2.5 px-4 rounded-xl text-xs font-black flex items-center justify-between transition-all bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#0B192C] shadow-[0_4px_15px_rgba(245,158,11,0.25)]"
                     >
                       <span>Open {page.title}</span>
                       <ArrowRight className="w-3.5 h-3.5" />

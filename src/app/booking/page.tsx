@@ -112,17 +112,17 @@ function BookingFormContent() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       {/* Form Container in Soft White */}
-      <div className="lg:col-span-8 rounded-3xl bg-white border border-[#0F3B27]/15 p-8 sm:p-10 shadow-xl">
+      <div className="lg:col-span-8 rounded-3xl bg-white border border-[#0B192C]/10 p-8 sm:p-10 shadow-xl">
         {submitted ? (
           <div className="text-center py-12 space-y-6">
-            <div className="w-16 h-16 rounded-full bg-[#0F3B27] text-[#92FF5F] flex items-center justify-center mx-auto shadow-lg">
+            <div className="w-16 h-16 rounded-full bg-[#0B192C] text-[#F59E0B] border border-[#F59E0B]/30 flex items-center justify-center mx-auto shadow-lg">
               <CheckCircle2 className="w-10 h-10 stroke-[3]" />
             </div>
-            <h2 className="font-serif text-3xl font-bold text-[#0F3B27]">
+            <h2 className="font-serif text-3xl font-bold text-[#0B192C]">
               Inquiry Submitted Successfully!
             </h2>
-            <p className="text-sm text-[#52796F] max-w-lg mx-auto leading-relaxed font-normal">
-              Thank you, <strong className="text-[#0F3B27]">{formData.fullName}</strong>. Our tour coordinators have received your request for <strong className="text-[#0F3B27]">{formData.selectedPackage}</strong> and will call you with ticket availability within 2 business hours.
+            <p className="text-sm text-[#64748B] max-w-lg mx-auto leading-relaxed font-normal">
+              Thank you, <strong className="text-[#0B192C]">{formData.fullName}</strong>. Our tour coordinators have received your request for <strong className="text-[#0B192C]">{formData.selectedPackage}</strong> and will call you with ticket availability within 2 business hours.
             </p>
 
             <div className="pt-6 flex flex-wrap items-center justify-center gap-4">
@@ -130,7 +130,7 @@ function BookingFormContent() {
                 href={generateWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#92FF5F] text-[#0F3B27] font-black text-xs uppercase tracking-wider hover:bg-[#7ce648] shadow-md"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] font-black text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 shadow-md"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Open in WhatsApp Concierge</span>
@@ -138,7 +138,7 @@ function BookingFormContent() {
 
               <button
                 onClick={() => setSubmitted(false)}
-                className="px-6 py-3.5 rounded-full bg-[#F7F9F7] border border-[#0F3B27]/20 text-[#0F3B27] text-xs font-bold hover:bg-[#0F3B27] hover:text-white transition-all"
+                className="px-6 py-3.5 rounded-full bg-[#F8F9FA] border border-[#0B192C]/20 text-[#0B192C] text-xs font-bold hover:bg-[#0B192C] hover:text-white transition-all"
               >
                 Submit Another Inquiry
               </button>
@@ -146,11 +146,11 @@ function BookingFormContent() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="border-b border-[#0F3B27]/10 pb-4 mb-6">
-              <h2 className="font-serif text-2xl font-bold text-[#0F3B27] mb-1">
+            <div className="border-b border-[#0B192C]/10 pb-4 mb-6">
+              <h2 className="font-serif text-2xl font-bold text-[#0B192C] mb-1">
                 Plan Your Journey
               </h2>
-              <p className="text-xs text-[#52796F]">
+              <p className="text-xs text-[#64748B]">
                 Submit your details below to receive seat availability and custom quotes.
               </p>
             </div>
@@ -158,7 +158,7 @@ function BookingFormContent() {
             {/* Contact Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+                <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                   Full Name *
                 </label>
                 <input
@@ -167,12 +167,12 @@ function BookingFormContent() {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   placeholder="e.g. Subhashish Roy"
-                  className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+                <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                   Mobile / WhatsApp No. *
                 </label>
                 <input
@@ -181,13 +181,13 @@ function BookingFormContent() {
                   value={formData.mobile}
                   onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
                   placeholder="e.g. +91 98300 XXXXX"
-                  className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+              <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                 Email Address
               </label>
               <input
@@ -195,19 +195,19 @@ function BookingFormContent() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="e.g. subhashish@gmail.com"
-                className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
               />
             </div>
 
             {/* Package Selection */}
             <div>
-              <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+              <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                 Select Tour Package *
               </label>
               <select
                 value={formData.selectedPackage}
                 onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] focus:outline-none focus:border-[#0F3B27] font-semibold"
+                className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] focus:outline-none focus:border-[#F59E0B] font-semibold"
               >
                 <optgroup label="Fixed Departure Tours (2026–2027)">
                   <option value="Fixed Departure: Tadoba Tiger Reserve (21 Dec 2026)">
@@ -267,7 +267,7 @@ function BookingFormContent() {
             {/* Travel Date & Party Size */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+                <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                   Preferred Travel Date / Month
                 </label>
                 <input
@@ -275,12 +275,12 @@ function BookingFormContent() {
                   value={formData.travelDate}
                   onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
                   placeholder="e.g. December 2026"
-                  className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+                <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                   Total Adults
                 </label>
                 <input
@@ -288,12 +288,12 @@ function BookingFormContent() {
                   min={1}
                   value={formData.adults}
                   onChange={(e) => setFormData({ ...formData, adults: Number(e.target.value) })}
-                  className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] focus:outline-none focus:border-[#0F3B27]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] focus:outline-none focus:border-[#F59E0B]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+                <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                   Children & Ages
                 </label>
                 <input
@@ -301,7 +301,7 @@ function BookingFormContent() {
                   value={formData.childrenAges}
                   onChange={(e) => setFormData({ ...formData, childrenAges: e.target.value })}
                   placeholder="e.g. 1 Child (Age 7)"
-                  className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
                 />
               </div>
             </div>
@@ -309,19 +309,19 @@ function BookingFormContent() {
             {/* Room & Meal Preferences */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-2">
+                <label className="block text-xs font-bold text-[#0B192C] mb-2">
                   Preferred Room Sharing
                 </label>
                 <div className="space-y-2 text-xs">
                   {["Twin Sharing", "Triple Sharing", "Single Occupancy"].map((option) => (
-                    <label key={option} className="flex items-center gap-2 cursor-pointer text-[#52796F] hover:text-[#0F3B27]">
+                    <label key={option} className="flex items-center gap-2 cursor-pointer text-[#64748B] hover:text-[#0B192C]">
                       <input
                         type="radio"
                         name="roomSharing"
                         value={option}
                         checked={formData.roomSharing === option}
                         onChange={(e) => setFormData({ ...formData, roomSharing: e.target.value })}
-                        className="accent-[#0F3B27]"
+                        className="accent-[#F59E0B]"
                       />
                       <span>{option}</span>
                     </label>
@@ -330,19 +330,19 @@ function BookingFormContent() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#0F3B27] mb-2">
+                <label className="block text-xs font-bold text-[#0B192C] mb-2">
                   Preferred Meal Choice
                 </label>
                 <div className="space-y-2 text-xs">
                   {["Standard (Veg & Non-Veg)", "Strict Vegetarian"].map((option) => (
-                    <label key={option} className="flex items-center gap-2 cursor-pointer text-[#52796F] hover:text-[#0F3B27]">
+                    <label key={option} className="flex items-center gap-2 cursor-pointer text-[#64748B] hover:text-[#0B192C]">
                       <input
                         type="radio"
                         name="mealChoice"
                         value={option}
                         checked={formData.mealChoice === option}
                         onChange={(e) => setFormData({ ...formData, mealChoice: e.target.value })}
-                        className="accent-[#0F3B27]"
+                        className="accent-[#F59E0B]"
                       />
                       <span>{option}</span>
                     </label>
@@ -353,46 +353,46 @@ function BookingFormContent() {
 
             {/* Special Requests / Add-ons */}
             <div className="pt-2">
-              <label className="block text-xs font-bold text-[#0F3B27] mb-2">
+              <label className="block text-xs font-bold text-[#0B192C] mb-2">
                 Special Requests / Add-ons
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#52796F]">
-                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/10 hover:border-[#0F3B27]/30 text-[#0F3B27]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#64748B]">
+                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/10 hover:border-[#F59E0B]/50 text-[#0B192C]">
                   <input
                     type="checkbox"
                     checked={formData.addonTrainAC}
                     onChange={(e) => setFormData({ ...formData, addonTrainAC: e.target.checked })}
-                    className="accent-[#0F3B27]"
+                    className="accent-[#F59E0B]"
                   />
                   <span>Upgrade Train to 3-Tier/2-Tier AC Sleeper</span>
                 </label>
 
-                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/10 hover:border-[#0F3B27]/30 text-[#0F3B27]">
+                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/10 hover:border-[#F59E0B]/50 text-[#0B192C]">
                   <input
                     type="checkbox"
                     checked={formData.addonFlight}
                     onChange={(e) => setFormData({ ...formData, addonFlight: e.target.checked })}
-                    className="accent-[#0F3B27]"
+                    className="accent-[#F59E0B]"
                   />
                   <span>Air Ticket Booking Required</span>
                 </label>
 
-                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/10 hover:border-[#0F3B27]/30 text-[#0F3B27]">
+                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/10 hover:border-[#F59E0B]/50 text-[#0B192C]">
                   <input
                     type="checkbox"
                     checked={formData.addonPrivateCar}
                     onChange={(e) => setFormData({ ...formData, addonPrivateCar: e.target.checked })}
-                    className="accent-[#0F3B27]"
+                    className="accent-[#F59E0B]"
                   />
                   <span>Exclusive Private Car Required</span>
                 </label>
 
-                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/10 hover:border-[#0F3B27]/30 text-[#0F3B27]">
+                <label className="flex items-center gap-2 cursor-pointer p-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/10 hover:border-[#F59E0B]/50 text-[#0B192C]">
                   <input
                     type="checkbox"
                     checked={formData.addonACRoom}
                     onChange={(e) => setFormData({ ...formData, addonACRoom: e.target.checked })}
-                    className="accent-[#0F3B27]"
+                    className="accent-[#F59E0B]"
                   />
                   <span>AC Room Upgrade Required</span>
                 </label>
@@ -401,7 +401,7 @@ function BookingFormContent() {
 
             {/* Notes */}
             <div>
-              <label className="block text-xs font-bold text-[#0F3B27] mb-1.5">
+              <label className="block text-xs font-bold text-[#0B192C] mb-1.5">
                 Notes / Special Requirements
               </label>
               <textarea
@@ -409,7 +409,7 @@ function BookingFormContent() {
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 placeholder="Any special medical conditions, senior traveler assistance, or dietary requirements..."
-                className="w-full px-4 py-3 rounded-xl bg-[#F7F9F7] border border-[#0F3B27]/15 text-xs text-[#0F3B27] placeholder-[#52796F] focus:outline-none focus:border-[#0F3B27]"
+                className="w-full px-4 py-3 rounded-xl bg-[#F8F9FA] border border-[#0B192C]/15 text-xs text-[#0B192C] placeholder-[#64748B] focus:outline-none focus:border-[#F59E0B]"
               />
             </div>
 
@@ -418,9 +418,9 @@ function BookingFormContent() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full sm:flex-1 py-3.5 rounded-2xl bg-[#0F3B27] text-[#92FF5F] font-black text-xs uppercase tracking-wider hover:bg-[#195237] transition-colors shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer"
+                className="w-full sm:flex-1 py-3.5 rounded-2xl bg-[#0B192C] text-[#F59E0B] border border-[#F59E0B]/30 font-black text-xs uppercase tracking-wider hover:bg-[#1E3E62] transition-colors shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4 text-[#F59E0B]" />
                 <span>{submitting ? "Saving to Database..." : "Submit Booking Inquiry"}</span>
               </button>
 
@@ -428,7 +428,7 @@ function BookingFormContent() {
                 href={generateWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-[#92FF5F] border border-[#0F3B27]/20 text-[#0F3B27] text-xs font-black hover:bg-[#7ce648] transition-all flex items-center justify-center gap-2 shadow-md"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] text-xs font-black hover:from-amber-300 hover:to-amber-400 transition-all flex items-center justify-center gap-2 shadow-md"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Quick WhatsApp Send</span>
@@ -438,19 +438,19 @@ function BookingFormContent() {
         )}
       </div>
 
-      {/* Direct Contact & Desk Sidebar Bento in Move Green */}
+      {/* Direct Contact & Desk Sidebar Bento in Midnight Navy */}
       <div className="lg:col-span-4 space-y-6">
-        <div className="p-7 rounded-3xl bg-[#0F3B27] text-white border border-[#92FF5F]/30 shadow-2xl">
-          <span className="text-[10px] font-black px-3 py-1 rounded-full bg-[#92FF5F] text-[#0F3B27] uppercase tracking-wider mb-4 inline-block">
+        <div className="p-7 rounded-3xl bg-[#0B192C] text-white border border-[#F59E0B]/30 shadow-2xl">
+          <span className="text-[10px] font-black px-3 py-1 rounded-full bg-[#F59E0B] text-[#0B192C] uppercase tracking-wider mb-4 inline-block">
             Official Desk
           </span>
           <h3 className="font-serif text-xl font-bold text-white mb-4">
             Direct Contact & Office Desk
           </h3>
 
-          <div className="space-y-4 text-xs text-[#F7F9F7]">
+          <div className="space-y-4 text-xs text-[#F8F9FA]/90">
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-[#92FF5F] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Departure Hubs:</strong>
                 <span>Howrah, Sealdah & Kolkata Railway Stations</span>
@@ -466,7 +466,7 @@ function BookingFormContent() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Clock className="w-4 h-4 text-[#92FF5F] shrink-0 mt-0.5" />
+              <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Operational Hours:</strong>
                 <span>Monday – Saturday: 10:00 AM – 7:30 PM</span>
@@ -474,10 +474,10 @@ function BookingFormContent() {
             </div>
 
             <div className="flex items-start gap-3">
-              <Phone className="w-4 h-4 text-[#92FF5F] shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
               <div>
                 <strong className="text-white block mb-0.5">Helpline:</strong>
-                <a href="tel:+919830012345" className="text-[#92FF5F] hover:underline font-bold">
+                <a href="tel:+919830012345" className="text-[#F59E0B] hover:underline font-bold">
                   +91 98300 12345
                 </a>
               </div>
@@ -486,9 +486,9 @@ function BookingFormContent() {
         </div>
 
         {/* Assurance Card */}
-        <div className="p-7 rounded-3xl bg-white border border-[#0F3B27]/15 text-xs text-[#52796F] space-y-3 shadow-md">
-          <div className="font-bold text-[#0F3B27] flex items-center gap-2 text-sm">
-            <Sparkles className="w-4 h-4 text-[#FF7036]" />
+        <div className="p-7 rounded-3xl bg-white border border-[#0B192C]/10 text-xs text-[#64748B] space-y-3 shadow-md">
+          <div className="font-bold text-[#0B192C] flex items-center gap-2 text-sm">
+            <Sparkles className="w-4 h-4 text-[#F59E0B]" />
             <span>Why Book Early with Rupkotha?</span>
           </div>
           <p className="leading-relaxed font-normal">
@@ -502,29 +502,64 @@ function BookingFormContent() {
 
 export default function BookingPage() {
   return (
-    <main className="min-h-screen bg-[#F7F9F7] text-[#0F3B27] selection:bg-[#92FF5F] selection:text-[#0F3B27]">
+    <main className="min-h-screen bg-[#F8F9FA] text-[#0B192C] selection:bg-[#F59E0B] selection:text-[#0B192C]">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0F3B27] text-[#92FF5F] text-xs font-black uppercase tracking-wider mb-6 shadow-md">
-          <Sparkles className="w-3.5 h-3.5" />
+      <section className="relative pt-20 pb-12 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B192C] text-[#F59E0B] text-xs font-black uppercase tracking-wider mb-6 shadow-md border border-[#F59E0B]/30">
+          <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
           <span>Instant Reservation Desk</span>
         </div>
 
-        <h1 className="font-serif text-3xl sm:text-5xl font-black text-[#0F3B27] tracking-tight">
-          Booking & <span className="text-[#0F3B27] underline decoration-[#92FF5F] decoration-4">Inquiries</span>
+        <h1 className="font-serif text-3xl sm:text-5xl font-black text-[#0B192C] tracking-tight">
+          Booking & <span className="text-[#0B192C] underline decoration-[#F59E0B] decoration-4">Inquiries</span>
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-[#52796F] max-w-2xl mx-auto font-normal leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg text-[#64748B] max-w-2xl mx-auto font-normal leading-relaxed">
           Reserve your seat for 2026–2027 departures or customize a private circuit with our tour planners.
         </p>
       </section>
 
       {/* Booking Form Component with Suspense boundary */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16">
-        <Suspense fallback={<div className="text-center text-[#0F3B27] py-12">Loading booking form...</div>}>
+      <section className="py-8 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto mb-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Booking Desk & Inquiries | Rupkotha Travels",
+              "description":
+                "Official booking desk and WhatsApp concierge for reserving fixed departures, custom Himalayan road trips, and Eco Tour Odisha permits.",
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rupkothatravels.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Booking", "item": "https://rupkothatravels.com/booking" },
+                ],
+              },
+            }),
+          }}
+        />
+
+        <Suspense fallback={<div className="text-center text-[#0B192C] py-12">Loading booking form...</div>}>
           <BookingFormContent />
         </Suspense>
+      </section>
+
+      {/* AEO Voice & Booking Summary Block */}
+      <section className="py-4 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto mb-16">
+        <div className="rounded-3xl bg-[#060D17] text-white border border-amber-500/30 p-8 sm:p-10 shadow-xl aeo-answer-block">
+          <span className="text-xs font-black px-3.5 py-1.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30 uppercase tracking-wider mb-3 inline-block">
+            AEO Booking Direct Answer
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-3">
+            How do I book a tour with Rupkotha Travels from Kolkata?
+          </h2>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal voice-answer-summary">
+            You can book any tour with Rupkotha Travels by submitting your departure selection and traveler details through the online booking form, contacting the Kolkata desk via WhatsApp (+91 98300 12345), or paying the initial advance deposit to secure your train berths and hotel rooms.
+          </p>
+        </div>
       </section>
 
       <Footer />

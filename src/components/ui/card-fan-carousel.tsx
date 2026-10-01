@@ -75,7 +75,7 @@ function getSlotConfig(slot: number) {
 }
 
 const ARROW_CLASSES =
-  "relative flex items-center justify-center rounded-full border-2 border-amber-500/60 bg-[#0B192C] text-amber-400 cursor-pointer shrink-0 z-30 outline-none shadow-[0_6px_25px_rgba(245,158,11,0.35)] hover:border-amber-400 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-300";
+  "relative flex items-center justify-center rounded-full border-2 border-amber-500/60 bg-[#0B192C] text-amber-400 cursor-pointer shrink-0 z-30 outline-none shadow-[0_6px_25px_rgba(245,158,11,0.35)] hover:border-amber-400 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-500 hover:text-[#0B192C] active:scale-95 transition-all duration-300";
 
 export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -377,8 +377,8 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                   className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 hover:scale-105"
                 />
                 
-                {/* Subtle Luxury Gradient Overlay in Midnight Obsidian */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-[#0B192C]/65 to-black/30 z-20 pointer-events-none" />
+                {/* Subtle Luxury Gradient Overlay in Dark Navy Blue */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/75 to-[#081426]/30 z-20 pointer-events-none" />
 
                 {/* Rich Content Layer */}
                 {(card.title || card.badge || card.tagline) && (
@@ -387,7 +387,7 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                       {card.badge && (
                         <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[10px] font-black tracking-wider uppercase backdrop-blur-md border shadow-md ${
                           isCenter
-                            ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-300 shadow-[0_2px_10px_rgba(245,158,11,0.5)]"
+                            ? "bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] border-amber-300 shadow-[0_2px_10px_rgba(245,158,11,0.5)]"
                             : "bg-[#0B192C]/90 text-amber-400 border-amber-500/40"
                         }`}>
                           {Icon && <Icon className="w-3 h-3" />}
@@ -415,7 +415,7 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                       {isCenter && (
                         <div className="mt-1.5 pt-1.5 border-t border-amber-500/30 flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-amber-400">
                           <span className="font-bold">STANDARD #0{index + 1}</span>
-                          <span className="font-black px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 uppercase tracking-widest text-[8px]">ACTIVE</span>
+                          <span className="font-black px-2 py-0.5 rounded-full bg-amber-400 text-[#0B192C] uppercase tracking-widest text-[8px]">ACTIVE</span>
                         </div>
                       )}
                     </div>

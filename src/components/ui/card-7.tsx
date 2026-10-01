@@ -30,7 +30,7 @@ const TravelCard = React.forwardRef<HTMLDivElement, TravelCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group relative w-full overflow-hidden rounded-2xl border border-[#0B192C]/15 bg-[#060D17] shadow-lg",
+          "group relative w-full overflow-hidden rounded-2xl border border-[#0B192C]/15 bg-[#0B192C] shadow-lg",
           "transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-1.5 hover:border-[#F59E0B]/60",
           className
         )}
@@ -43,15 +43,15 @@ const TravelCard = React.forwardRef<HTMLDivElement, TravelCardProps>(
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-90 contrast-105"
         />
 
-        {/* Cinematic Gradient Overlay in Midnight Obsidian */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-[#060D17]/70 to-[#060D17]/25" />
+        {/* Cinematic Gradient Overlay in Dark Navy Blue */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/75 to-[#0B192C]/30" />
 
         {/* Content */}
         <div className="relative flex h-full flex-col justify-between p-4 sm:p-5 text-white z-10">
           {/* Top Row: Icon Badge & Optional Tag */}
           <div className="flex items-center justify-between">
             {logo && (
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-amber-500/30 bg-[#0B192C]/85 backdrop-blur-md shadow-md group-hover:border-[#F59E0B] group-hover:bg-[#060D17] transition-colors">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-amber-500/30 bg-[#0B192C]/85 backdrop-blur-md shadow-md group-hover:border-[#F59E0B] group-hover:bg-[#0B192C] transition-colors">
                 {logo}
               </div>
             )}

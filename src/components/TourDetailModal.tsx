@@ -39,7 +39,7 @@ export default function TourDetailModal({ tour, onClose }: TourDetailModalProps)
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-[#060D17]/85 backdrop-blur-md"
+          className="fixed inset-0 bg-[#0B192C]/85 backdrop-blur-md"
         />
 
         {/* Modal Container */}
@@ -53,7 +53,7 @@ export default function TourDetailModal({ tour, onClose }: TourDetailModalProps)
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#060D17] text-white hover:bg-amber-400 hover:text-slate-950 transition-colors shadow-lg"
+            className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-[#0B192C] text-white hover:bg-amber-400 hover:text-[#0B192C] transition-colors shadow-lg"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -66,10 +66,10 @@ export default function TourDetailModal({ tour, onClose }: TourDetailModalProps)
               alt={tour.imageAlt}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-[#060D17]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/60 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <div className="flex flex-wrap items-center gap-2 mb-2">
-                <span className="px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md">
+                <span className="px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] text-xs font-black uppercase tracking-wider shadow-md">
                   {tour.type}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-[#0B192C] text-amber-300 border border-amber-500/30 text-xs font-bold">
@@ -94,8 +94,8 @@ export default function TourDetailModal({ tour, onClose }: TourDetailModalProps)
 
           {/* Modal Scrollable Body */}
           <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm">
-            {/* Tariff Grid in Midnight Obsidian */}
-            <div className="p-5 rounded-2xl bg-[#060D17] text-white border border-amber-500/30 grid grid-cols-1 sm:grid-cols-3 gap-4 shadow-xl">
+            {/* Tariff Grid in Dark Navy Blue */}
+            <div className="p-5 rounded-2xl bg-[#0B192C] text-white border border-amber-500/30 grid grid-cols-1 sm:grid-cols-3 gap-4 shadow-xl">
               <div>
                 <div className="text-xs text-slate-300 font-medium">Twin Sharing Rate</div>
                 <div className="text-2xl font-black text-amber-400 font-serif">
@@ -199,7 +199,7 @@ export default function TourDetailModal({ tour, onClose }: TourDetailModalProps)
               <Link
                 href={`/booking?package=${encodeURIComponent(tour.title)}`}
                 onClick={onClose}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm transition-all shadow-[0_4px_20px_rgba(245,158,11,0.35)]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#0B192C] font-black text-sm transition-all shadow-[0_4px_20px_rgba(245,158,11,0.35)]"
               >
                 <span>Book This Departure</span>
                 <ArrowRight className="w-4 h-4 stroke-[3]" />

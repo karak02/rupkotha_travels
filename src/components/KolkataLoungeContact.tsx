@@ -55,8 +55,8 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#060D17] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-[#0B192C] relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Office & Lounge Details */}
           <div className="lg:col-span-5 space-y-8">
@@ -149,7 +149,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
                     placeholder="e.g. Joydeep Ghosh"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
                   />
                 </div>
 
@@ -161,7 +161,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
                     placeholder="+91 98300 XXXXX"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
                   />
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
                   <select
                     value={destination}
                     onChange={(e) => setDestination(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
                   >
                     <option value="Europe & Swiss Alps">Europe & Swiss Alps</option>
                     <option value="Scandinavia & Northern Lights">Scandinavia & Northern Lights</option>
@@ -189,7 +189,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
                   <select
                     value={travelers}
                     onChange={(e) => setTravelers(e.target.value)}
-                    className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
+                    className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880]"
                   >
                     <option value="Solo Traveler">Solo Traveler</option>
                     <option value="Couple (2 Travelers)">Couple (2 Travelers)</option>
@@ -206,7 +206,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
                   placeholder="e.g. We are celebrating our 25th anniversary in Switzerland, prefer vegetarian meals and direct flights from Kolkata..."
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="bg-[#060D17] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] resize-none"
+                  className="bg-[#0B192C] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A880] resize-none"
                 />
               </div>
 

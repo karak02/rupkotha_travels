@@ -478,8 +478,8 @@ export default function MountainExploreShowcase() {
           </AnimatePresence>
 
           {/* Ambient Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F3B27] via-[#0F3B27]/40 to-[#0F3B27]/80" />
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#0F3B27]/60 to-[#0F3B27]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/40 to-[#081426]/80" />
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#0B192C]/60 to-[#081426]" />
         </div>
 
         {/* GIANT MONUMENTAL "EXPLORE" TYPOGRAPHY LAYER */}
@@ -505,8 +505,8 @@ export default function MountainExploreShowcase() {
           </motion.div>
         </div>
 
-        {/* Main Foreground Interactive Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col justify-between flex-1 w-full">
+        {/* Main Foreground Interactive Content with Comfortable Side Margins */}
+        <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 flex flex-col justify-between flex-1 w-full">
           {/* Top Telemetry Header Bar & Mobile-Friendly Expedition Toggle Bar */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-amber-500/20">
             <div className="flex items-center justify-between gap-3">
@@ -559,7 +559,7 @@ export default function MountainExploreShowcase() {
                   onClick={() => setActivePeakIndex(idx)}
                   className={`px-3 py-1.5 sm:py-1 rounded-full text-xs font-mono font-bold transition-all border whitespace-nowrap cursor-pointer shrink-0 touch-manipulation ${
                     idx === activePeakIndex
-                      ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.4)] scale-102"
+                      ? "bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] border-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.4)] scale-102"
                       : "bg-[#0B111E]/80 text-white/70 border-white/10 hover:border-amber-500/40 hover:text-white active:bg-white/10"
                   }`}
                 >
@@ -659,7 +659,7 @@ export default function MountainExploreShowcase() {
                       href={`/booking?package=${encodeURIComponent(
                         activeExpedition.name
                       )}`}
-                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] group"
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] font-black text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] group"
                     >
                       <span>Book Now</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -696,10 +696,10 @@ export default function MountainExploreShowcase() {
                   alt={activeExpedition.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-transparent to-transparent opacity-85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent opacity-85" />
 
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#060D17]/90 backdrop-blur-md text-amber-300 text-[11px] font-mono font-bold border border-amber-500/30">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#0B192C]/90 backdrop-blur-md text-amber-300 text-[11px] font-mono font-bold border border-amber-500/30">
                     {activeExpedition.coordinates}
                   </span>
                   <span className="px-2.5 py-0.5 rounded-full bg-white/90 text-[#0B192C] text-[11px] font-black">

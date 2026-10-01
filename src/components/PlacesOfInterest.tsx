@@ -67,8 +67,8 @@ export default function PlacesOfInterest({
       : destinations.filter((d) => d.category === activeCategory);
 
   return (
-    <section className="py-20 bg-[#060D17] border-b border-[#C5A880]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-[#0B192C] border-b border-[#C5A880]/20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -124,7 +124,7 @@ export default function PlacesOfInterest({
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/40 to-transparent" />
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#060D17]/80 backdrop-blur-sm border border-white/10 text-[10px] text-[#E0A96D] font-mono uppercase">
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0B192C]/80 backdrop-blur-sm border border-white/10 text-[10px] text-[#E0A96D] font-mono uppercase">
                     {item.subtitle}
                   </span>
                 </div>

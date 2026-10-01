@@ -24,11 +24,11 @@ export default function FixedDeparturesPage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#F8F9FA] text-[#0B192C] selection:bg-[#F59E0B] selection:text-[#060D17]">
+    <main className="min-h-screen bg-[#F8F9FA] text-[#0B192C] selection:bg-[#F59E0B] selection:text-[#0B192C]">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <section className="relative pt-20 pb-12 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-wider mb-6 border border-amber-500/30 shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-amber-500" />
           <span>2026–2027 Confirmed Small-Group Departures</span>
@@ -43,7 +43,7 @@ export default function FixedDeparturesPage() {
       </section>
 
       {/* Filter and Search Bar Bento */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-6 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto">
         <div className="p-4 sm:p-6 rounded-3xl bg-white border border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl">
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
@@ -104,7 +104,7 @@ export default function FixedDeparturesPage() {
       </section>
 
       {/* Tours Grid */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16">
+      <section className="py-10 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTours.map((tour, idx) => (
             <motion.div
@@ -122,14 +122,14 @@ export default function FixedDeparturesPage() {
                   alt={tour.imageAlt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060D17]/95 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/95 via-transparent to-transparent" />
 
                 {/* Top Badges */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full bg-[#0B192C] text-[11px] font-black text-amber-300 border border-amber-500/30 shadow-md">
                     Type 0{tour.categoryType}
                   </span>
-                  <span className="px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-black shadow-md">
+                  <span className="px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] text-xs font-black shadow-md">
                     ₹{tour.twinRate.toLocaleString("en-IN")}/-
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export default function FixedDeparturesPage() {
 
                   <Link
                     href={`/booking?package=${encodeURIComponent(tour.title)}`}
-                    className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-black text-center transition-all shadow-md"
+                    className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#0B192C] text-xs font-black text-center transition-all shadow-md"
                   >
                     Book Now
                   </Link>
@@ -207,6 +207,50 @@ export default function FixedDeparturesPage() {
             </button>
           </div>
         )}
+      </section>
+
+      {/* AEO Voice Summary & Package Schema */}
+      <section className="py-8 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto mb-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Fixed Departure Tour Packages 2026–2027",
+              "description":
+                "Curated small-group fixed departures departing from Howrah and Sealdah with confirmed train tickets, verified hotels, and 4-course homely meals.",
+              "numberOfItems": FIXED_DEPARTURES.length,
+              "itemListElement": FIXED_DEPARTURES.map((tour, idx) => ({
+                "@type": "ListItem",
+                "position": idx + 1,
+                "item": {
+                  "@type": "TouristTrip",
+                  "name": tour.title,
+                  "description": `${tour.duration} escorted trip to ${tour.coveringPlaces || tour.nightStay}.`,
+                  "offers": {
+                    "@type": "Offer",
+                    "price": tour.twinRate,
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/InStock",
+                  },
+                },
+              })),
+            }),
+          }}
+        />
+
+        <div className="rounded-3xl bg-[#060D17] text-white border border-amber-500/30 p-8 sm:p-10 shadow-xl aeo-answer-block">
+          <span className="text-xs font-black px-3.5 py-1.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30 uppercase tracking-wider mb-3 inline-block">
+            Quick Answer Box (AEO)
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-3">
+            What is Included in Rupkotha Travels Fixed Departure Tours from Kolkata?
+          </h2>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal voice-answer-summary">
+            Every fixed departure from Rupkotha Travels includes confirmed Sleeper train tickets from Howrah or Sealdah, verified accommodation on twin/triple sharing, 4 fresh meals daily (bed tea, breakfast, lunch, evening tea & dinner), dedicated SUVs or Tempo Travellers, station luggage porterage, and an experienced Bengali tour escort.
+          </p>
+        </div>
       </section>
 
       {/* Tour Detail Modal */}

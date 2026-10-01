@@ -3,14 +3,16 @@
 
 @theme {
   --color-brand-dark: #0b192c;
-  --color-brand-darker: #060d17;
+  --color-brand-darker: #081426;
   --color-brand-surface: #1e3e62;
+  --color-brand-navy: #0b192c;
+  --color-brand-deepnavy: #081426;
   --color-brand-lime: #f59e0b;
   --color-brand-gold: #f59e0b;
   --color-brand-amber: #f59e0b;
   --color-brand-sand: #fef3c7;
   --color-brand-light: #f8f9fa;
-  --color-brand-orange: #f59e0b;
+  --color-brand-orange: #ff7036;
   --color-brand-ice: #f1f5f9;
   --color-brand-mint: #fef3c7;
   --color-brand-muted: #64748b;
@@ -43,8 +45,10 @@
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
-  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
-  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-bricolage), "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-bricolage: var(--font-bricolage), "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: var(--font-bricolage), "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -87,7 +91,7 @@
 
   --bg-light: #f8f9fa;
   --bg-dark: #0b192c;
-  --bg-darker: #060d17;
+  --bg-darker: #081426;
   --color-lime: #f59e0b;
   --color-gold: #f59e0b;
   --color-orange: #ff7036;
@@ -102,6 +106,26 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Content Container & Eye-Level Reading Bounds */
+.page-container,
+.site-container {
+  width: 100%;
+  max-width: 80rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 4rem);
+  padding-right: clamp(1.25rem, 4vw, 4rem);
+}
+
+.text-readable-zone {
+  max-width: 68ch;
+}
+
+/* Ensure global sections maintain comfortable eye-level reading margins */
+section {
+  width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -146,19 +170,19 @@ body {
 }
 
 .bento-card-darker {
-  background: #060d17;
+  background: #081426;
   color: #f8f9fa;
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .lime-pill {
   background-color: #f59e0b;
-  color: #060d17;
+  color: #0b192c;
 }
 
 .gold-pill {
   background-color: #f59e0b;
-  color: #060d17;
+  color: #0b192c;
 }
 
 .orange-pill {
@@ -207,7 +231,7 @@ body {
   height: 15rem;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 16px 36px -6px rgba(6, 13, 23, 0.5), 0 0 20px rgba(245, 158, 11, 0.15);
+  box-shadow: 0 16px 36px -6px rgba(11, 25, 44, 0.5), 0 0 20px rgba(245, 158, 11, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.9);
   background-color: #0b192c;
   cursor: pointer;

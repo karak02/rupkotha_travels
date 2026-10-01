@@ -239,33 +239,33 @@ export default function VideoHeroScroller() {
           />
 
           {/* Luxury Directional Lighting & Vignette Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#061B12]/80 via-[#061B12]/35 to-[#061B12]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B192C]/85 via-[#0B192C]/40 to-[#081426]/95" />
           
           {/* Dynamic Side Shadows matching text alignment */}
           <div
             className={`absolute inset-0 transition-opacity duration-500 ${
               activeSceneIndex === 1
-                ? "bg-gradient-to-l from-[#061B12]/85 via-transparent to-transparent"
-                : "bg-gradient-to-r from-[#061B12]/85 via-transparent to-transparent"
+                ? "bg-gradient-to-l from-[#0B192C]/90 via-transparent to-transparent"
+                : "bg-gradient-to-r from-[#0B192C]/90 via-transparent to-transparent"
             }`}
           />
-          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#061B12] via-[#061B12]/80 to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#081426] via-[#0B192C]/80 to-transparent z-10" />
         </div>
 
         {/* Top HUD: Government Auth Partner + Scene Switcher */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-20 sm:pt-22 pb-2 flex items-center justify-between">
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-20 pt-20 sm:pt-24 pb-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0F3B27]/90 border border-[#92FF5F]/30 text-[#92FF5F] text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-md">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#92FF5F]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0B192C]/90 border border-[#F59E0B]/35 text-[#F59E0B] text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-md">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#F59E0B]" />
               <span className="hidden xs:inline">Govt Authorized Partner</span>
               <span className="xs:hidden">Auth Partner</span>
             </span>
           </div>
 
           {/* Interactive Scene Segment Indicators */}
-          <div className="flex items-center gap-3 bg-[#0F3B27]/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 shadow-lg">
+          <div className="flex items-center gap-3 bg-[#0B192C]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 shadow-lg">
             <div className="flex items-center gap-1.5 text-xs font-mono text-white/90">
-              <span className="text-[#92FF5F] font-bold">
+              <span className="text-[#F59E0B] font-bold">
                 0{activeSceneIndex + 1}
               </span>
               <span className="text-white/30">/</span>
@@ -279,9 +279,9 @@ export default function VideoHeroScroller() {
                   onClick={() => scrollToScene(idx)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     idx === activeSceneIndex
-                      ? "w-7 bg-[#92FF5F] shadow-[0_0_8px_#92FF5F]"
+                      ? "w-7 bg-[#F59E0B] shadow-[0_0_8px_#F59E0B]"
                       : idx < activeSceneIndex
-                      ? "w-3 bg-[#92FF5F]/40 hover:bg-[#92FF5F]/60"
+                      ? "w-3 bg-[#F59E0B]/50 hover:bg-[#F59E0B]/80"
                       : "w-2 bg-white/25 hover:bg-white/50"
                   }`}
                   aria-label={`Jump to scene ${idx + 1}`}
@@ -291,8 +291,8 @@ export default function VideoHeroScroller() {
           </div>
         </div>
 
-        {/* Center Stage: Staggered Dynamic Left -> Right -> Left Layout */}
-        <div className="relative z-20 flex-1 flex items-center px-4 sm:px-8 lg:px-14 max-w-7xl mx-auto w-full my-auto">
+        {/* Center Stage: Staggered Dynamic Left -> Right -> Left Layout with Comfortable Eye-Level Margins */}
+        <div className="relative z-20 flex-1 flex items-center px-6 sm:px-12 lg:px-16 xl:px-20 max-w-7xl mx-auto w-full my-auto">
           {HERO_SCENES.map((scene, idx) => {
             const parallax = getSceneParallax(idx);
             const IconComponent = scene.badgeIcon;
@@ -307,7 +307,7 @@ export default function VideoHeroScroller() {
                   pointerEvents: parallax.pointerEvents as any,
                   transition: "opacity 0.15s ease-out, transform 0.15s ease-out",
                 }}
-                className={`absolute inset-x-4 sm:inset-x-8 lg:inset-x-14 flex flex-col justify-center max-w-2xl ${
+                className={`absolute inset-x-6 sm:inset-x-12 lg:inset-x-16 xl:inset-x-20 flex flex-col justify-center max-w-2xl ${
                   isLeft
                     ? "items-start text-left mr-auto"
                     : "items-end text-right ml-auto"
@@ -315,8 +315,8 @@ export default function VideoHeroScroller() {
               >
                 {/* 1. Scene Pill Badge */}
                 <div className={`flex ${isLeft ? "justify-start" : "justify-end"}`}>
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/25 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md">
-                    <IconComponent className="w-3.5 h-3.5 text-[#FF7036]" />
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-[#F59E0B]/35 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md">
+                    <IconComponent className="w-3.5 h-3.5 text-[#F59E0B]" />
                     <span className="text-white">{scene.badge}</span>
                   </span>
                 </div>
@@ -324,7 +324,7 @@ export default function VideoHeroScroller() {
                 {/* 2. Bold Headline (Pure White with Crisp Readability) */}
                 <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.15] drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
                   {scene.titlePrefix}{" "}
-                  <span className="text-white underline decoration-[#FF7036] decoration-4 underline-offset-4">
+                  <span className="text-white underline decoration-[#F59E0B] decoration-4 underline-offset-4">
                     {scene.titleHighlight}
                   </span>{" "}
                   {scene.titleSuffix && <span className="text-white">{scene.titleSuffix}</span>}
@@ -349,17 +349,17 @@ export default function VideoHeroScroller() {
                     <>
                       <Link
                         href={scene.primaryCtaHref}
-                        className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-[#FF7036] text-white font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-[#b84e0c] transition-all transform hover:scale-105 shadow-xl shadow-[#FF7036]/30 border border-white/20 group"
+                        className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] font-black text-xs sm:text-sm uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all transform hover:scale-105 shadow-xl shadow-amber-500/20 border border-white/20 group"
                       >
-                        <span className="text-white">{scene.primaryCtaText}</span>
-                        <ArrowRight className="w-4 h-4 stroke-[3] text-white group-hover:translate-x-1 transition-transform" />
+                        <span>{scene.primaryCtaText}</span>
+                        <ArrowRight className="w-4 h-4 stroke-[3] text-[#0B192C] group-hover:translate-x-1 transition-transform" />
                       </Link>
 
                       <Link
                         href={scene.secondaryCtaHref}
                         className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 rounded-full bg-white/10 border border-white/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-white/20 transition-all backdrop-blur-md shadow-lg"
                       >
-                        <Compass className="w-4 h-4 text-[#FF7036]" />
+                        <Compass className="w-4 h-4 text-[#F59E0B]" />
                         <span className="text-white">{scene.secondaryCtaText}</span>
                       </Link>
                     </>
@@ -369,16 +369,16 @@ export default function VideoHeroScroller() {
                         href={scene.secondaryCtaHref}
                         className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 rounded-full bg-white/10 border border-white/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-white/20 transition-all backdrop-blur-md shadow-lg"
                       >
-                        <Compass className="w-4 h-4 text-[#FF7036]" />
+                        <Compass className="w-4 h-4 text-[#F59E0B]" />
                         <span className="text-white">{scene.secondaryCtaText}</span>
                       </Link>
 
                       <Link
                         href={scene.primaryCtaHref}
-                        className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-[#FF7036] text-white font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-[#b84e0c] transition-all transform hover:scale-105 shadow-xl shadow-[#FF7036]/30 border border-white/20 group"
+                        className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] font-black text-xs sm:text-sm uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all transform hover:scale-105 shadow-xl shadow-amber-500/20 border border-white/20 group"
                       >
-                        <span className="text-white">{scene.primaryCtaText}</span>
-                        <ArrowRight className="w-4 h-4 stroke-[3] text-white group-hover:translate-x-1 transition-transform" />
+                        <span>{scene.primaryCtaText}</span>
+                        <ArrowRight className="w-4 h-4 stroke-[3] text-[#0B192C] group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </>
                   )}
@@ -389,9 +389,9 @@ export default function VideoHeroScroller() {
         </div>
 
         {/* Bottom HUD: Subtle Scroll Down Indicator */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 border-t border-white/10 pt-3 flex items-center justify-between gap-4">
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-20 pb-4 sm:pb-6 border-t border-white/10 pt-3 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs text-white/70 font-medium">
-            <span className="w-2 h-2 rounded-full bg-[#92FF5F] animate-ping" />
+            <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-ping" />
             <span>
               {activeSceneIndex === 0
                 ? "Scene 01 (Left) • Scroll to advance video"
@@ -406,7 +406,7 @@ export default function VideoHeroScroller() {
               const nextScene = (activeSceneIndex + 1) % 3;
               scrollToScene(nextScene);
             }}
-            className="flex items-center gap-2 text-xs font-mono text-[#92FF5F] hover:text-white transition-colors"
+            className="flex items-center gap-2 text-xs font-mono text-[#F59E0B] hover:text-white transition-colors"
           >
             <span>Jump to 0{activeSceneIndex === 2 ? 1 : activeSceneIndex + 2}</span>
             <ArrowDown className="w-3.5 h-3.5 animate-bounce stroke-[2.5]" />

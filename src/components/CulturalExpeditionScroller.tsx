@@ -393,7 +393,7 @@ export default function CulturalExpeditionScroller() {
     <section
       id="cultural-expeditions"
       ref={containerRef}
-      className="relative w-full bg-[#060D17] text-[#F8F9FA] h-[450vh]"
+      className="relative w-full bg-[#0B192C] text-[#F8F9FA] h-[450vh]"
     >
       {/* Sticky Cinematic Viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between select-none">
@@ -420,11 +420,11 @@ export default function CulturalExpeditionScroller() {
               backgroundPosition: "0 0, 20px 20px",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-transparent to-[#060D17]/85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-[#0B192C]/85" />
         </div>
 
         {/* Top Header Bar */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-2 sm:pb-3 flex items-center justify-between border-b border-amber-500/15">
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-20 pt-3 sm:pt-4 pb-2 sm:pb-3 flex items-center justify-between border-b border-amber-500/15">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-[#0B111E] border border-amber-500/40 flex items-center justify-center text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
               <Compass className="w-4 h-4 animate-[spin_18s_linear_infinite]" />
@@ -446,18 +446,18 @@ export default function CulturalExpeditionScroller() {
               onClick={toggleSound}
               className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold transition-all border shadow-lg ${
                 isAudioPlaying
-                  ? "bg-amber-400 text-slate-950 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)]"
+                  ? "bg-amber-400 text-[#0B192C] border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)]"
                   : "bg-[#0B111E]/90 text-white/80 border-white/15 hover:border-amber-400/50"
               }`}
               title="Toggle Generative Ambient Tanpura & Temple Soundscape"
             >
               {isAudioPlaying ? (
                 <>
-                  <Volume2 className="w-3.5 h-3.5 animate-pulse text-slate-950" />
+                  <Volume2 className="w-3.5 h-3.5 animate-pulse text-[#0B192C]" />
                   <div className="flex items-end gap-0.5 h-2.5">
-                    <span className="w-0.5 bg-slate-950 h-full animate-[bounce_0.8s_ease-in-out_infinite]" />
-                    <span className="w-0.5 bg-slate-950 h-2/3 animate-[bounce_0.6s_ease-in-out_infinite]" />
-                    <span className="w-0.5 bg-slate-950 h-4/5 animate-[bounce_1s_ease-in-out_infinite]" />
+                    <span className="w-0.5 bg-[#0B192C] h-full animate-[bounce_0.8s_ease-in-out_infinite]" />
+                    <span className="w-0.5 bg-[#0B192C] h-2/3 animate-[bounce_0.6s_ease-in-out_infinite]" />
+                    <span className="w-0.5 bg-[#0B192C] h-4/5 animate-[bounce_1s_ease-in-out_infinite]" />
                   </div>
                   <span className="text-[10px] font-black">Soundscape Active</span>
                 </>
@@ -504,7 +504,7 @@ export default function CulturalExpeditionScroller() {
         </div>
 
         {/* Main Content Split: Left Interactive Topographic Map, Right Editorial Story Dossier */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center py-2 sm:py-3 overflow-hidden">
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-20 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center py-2 sm:py-3 overflow-hidden">
           {/* LEFT: Dynamic Topographic Interactive Map View (5 Cols) */}
           <div className="lg:col-span-5 hidden md:flex flex-col justify-center h-full relative">
             <div className="p-4 sm:p-5 rounded-3xl bg-[#0B111E]/95 backdrop-blur-xl border border-amber-500/30 relative overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.12)]">
@@ -623,7 +623,7 @@ export default function CulturalExpeditionScroller() {
                           }}
                           className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black tracking-wide border whitespace-nowrap transition-all duration-300 ${
                             isActive
-                              ? "bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 text-slate-950 border-amber-200 shadow-lg scale-105"
+                              ? "bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 text-[#0B192C] border-amber-200 shadow-lg scale-105"
                               : isVisited
                               ? "bg-[#0B111E]/90 text-amber-300 border-amber-500/40 opacity-90"
                               : "bg-[#0B111E]/80 text-white/80 border-white/20 opacity-75 group-hover:opacity-100"
@@ -632,7 +632,7 @@ export default function CulturalExpeditionScroller() {
                           <MapPin
                             className={`w-2.5 h-2.5 ${
                               isActive
-                                ? "text-slate-950 animate-bounce"
+                                ? "text-[#0B192C] animate-bounce"
                                 : isVisited
                                 ? "text-amber-400"
                                 : "text-white/60"
@@ -655,7 +655,7 @@ export default function CulturalExpeditionScroller() {
                           <div
                             className={`rounded-full transition-all duration-300 ${
                               isActive
-                                ? "w-3.5 h-3.5 bg-amber-300 border-2 border-slate-950 shadow-[0_0_12px_#F59E0B]"
+                                ? "w-3.5 h-3.5 bg-amber-300 border-2 border-[#0B192C] shadow-[0_0_12px_#F59E0B]"
                                 : isVisited
                                 ? "w-2.5 h-2.5 bg-amber-400 border border-slate-900"
                                 : "w-2 h-2 bg-white/70 border border-slate-900"
@@ -669,7 +669,7 @@ export default function CulturalExpeditionScroller() {
 
                 {/* Decorative Compass Rose (Bottom Right of 3D Map) */}
                 <div className="absolute bottom-2.5 right-2.5 pointer-events-none opacity-80 flex flex-col items-center">
-                  <div className="w-9 h-9 rounded-full border border-amber-500/40 bg-slate-950/70 backdrop-blur-md flex items-center justify-center text-amber-400 shadow-md">
+                  <div className="w-9 h-9 rounded-full border border-amber-500/40 bg-[#0B192C]/70 backdrop-blur-md flex items-center justify-center text-amber-400 shadow-md">
                     <Compass className="w-5 h-5 animate-[spin_24s_linear_infinite]" />
                   </div>
                   <span className="text-[7.5px] font-mono font-bold text-amber-300/80 mt-0.5">3D HUD</span>
@@ -709,7 +709,7 @@ export default function CulturalExpeditionScroller() {
               >
                 {/* Milestone Region Pill & Number */}
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black tracking-wider uppercase shadow-[0_0_15px_rgba(245,158,11,0.35)]">
+                  <span className="px-3 py-1 rounded-full bg-amber-400 text-[#0B192C] text-[10px] font-black tracking-wider uppercase shadow-[0_0_15px_rgba(245,158,11,0.35)]">
                     Stop {activeStop.number} of 05
                   </span>
                   <span className="text-[11px] font-bold uppercase tracking-widest text-amber-300">
@@ -737,7 +737,7 @@ export default function CulturalExpeditionScroller() {
                     alt={activeStop.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-transparent to-transparent opacity-90" />
 
                   <div className="absolute bottom-2.5 left-3 right-3 flex items-end justify-between">
                     <div className="text-[11px] text-white/90 max-w-md">
@@ -748,7 +748,7 @@ export default function CulturalExpeditionScroller() {
                         {activeStop.culinaryTradition}
                       </p>
                     </div>
-                    <span className="hidden sm:inline-flex px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-amber-200 text-[10px] font-mono border border-amber-500/30">
+                    <span className="hidden sm:inline-flex px-2.5 py-0.5 rounded-full bg-[#0B192C]/80 backdrop-blur-md text-amber-200 text-[10px] font-mono border border-amber-500/30">
                       {activeStop.altitude}
                     </span>
                   </div>
@@ -780,7 +780,7 @@ export default function CulturalExpeditionScroller() {
                 <div className="flex flex-wrap items-center gap-3 pt-0.5">
                   <Link
                     href="/destinations"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-black hover:from-amber-300 hover:to-amber-400 transition-all shadow-[0_4px_20px_rgba(245,158,11,0.35)] group"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] text-xs font-black hover:from-amber-300 hover:to-amber-400 transition-all shadow-[0_4px_20px_rgba(245,158,11,0.35)] group"
                   >
                     <span>Explore This Curated Circuit</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -800,7 +800,7 @@ export default function CulturalExpeditionScroller() {
         </div>
 
         {/* Bottom Scroll Indicator Helper */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-2 flex items-center justify-between text-[11px] text-white/50 border-t border-amber-500/15 pt-2">
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-20 pb-2 flex items-center justify-between text-[11px] text-white/50 border-t border-amber-500/15 pt-2">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_8px_#F59E0B]" />
             <span>Scroll down to navigate through India&apos;s cultural stops</span>

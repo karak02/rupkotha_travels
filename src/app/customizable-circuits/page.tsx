@@ -12,11 +12,11 @@ export default function CustomizableCircuitsPage() {
   const [activeTab, setActiveTab] = useState<"ladakh" | "andaman">("ladakh");
 
   return (
-    <main className="min-h-screen bg-[#F8F9FA] text-[#0B192C] selection:bg-[#F59E0B] selection:text-[#060D17]">
+    <main className="min-h-screen bg-[#F8F9FA] text-[#0B192C] selection:bg-[#F59E0B] selection:text-[#0B192C]">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <section className="relative pt-20 pb-12 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0B192C] text-[#F59E0B] text-xs font-black uppercase tracking-wider mb-6 shadow-md border border-[#F59E0B]/30">
           <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
           <span>Tailored Individual & Private Family Circuits</span>
@@ -31,7 +31,7 @@ export default function CustomizableCircuitsPage() {
       </section>
 
       {/* Region Switcher Tabs */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-6 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
           <button
             onClick={() => setActiveTab("ladakh")}
@@ -60,13 +60,13 @@ export default function CustomizableCircuitsPage() {
       </section>
 
       {/* Main Content Explorer */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16">
+      <section className="py-10 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto mb-16">
         {activeTab === "ladakh" ? (
           <div className="space-y-10">
             {/* Ladakh Specs Bento Banner in Luxury Midnight Navy */}
             <div className="rounded-3xl bg-[#0B192C] text-white border border-[#F59E0B]/30 p-8 sm:p-10 shadow-2xl">
               <div className="max-w-3xl mb-8">
-                <span className="text-xs font-black px-3 py-1 rounded-full bg-[#F59E0B] text-[#060D17] uppercase tracking-wider mb-3 inline-block">
+                <span className="text-xs font-black px-3 py-1 rounded-full bg-[#F59E0B] text-[#0B192C] uppercase tracking-wider mb-3 inline-block">
                   Ladakh Private Circuit Standards
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-2">
@@ -78,7 +78,7 @@ export default function CustomizableCircuitsPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <Utensils className="w-4 h-4" />
                     <span>Food & Stay Plan</span>
@@ -87,7 +87,7 @@ export default function CustomizableCircuitsPage() {
                     MAP Plan (Daily Breakfast & Dinner included). Premium stays in Leh, Pangong & Nubra.
                   </p>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <Car className="w-4 h-4" />
                     <span>Vehicles Provided</span>
@@ -96,7 +96,7 @@ export default function CustomizableCircuitsPage() {
                     Private Innova / Crysta / Xylo / Bolero or dedicated Tempo Traveller for private groups.
                   </p>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Permits & Coordination</span>
@@ -165,7 +165,7 @@ export default function CustomizableCircuitsPage() {
             {/* Andaman Specs Bento Banner in Luxury Midnight Navy */}
             <div className="rounded-3xl bg-[#0B192C] text-white border border-[#F59E0B]/30 p-8 sm:p-10 shadow-2xl">
               <div className="max-w-3xl mb-8">
-                <span className="text-xs font-black px-3 py-1 rounded-full bg-[#F59E0B] text-[#060D17] uppercase tracking-wider mb-3 inline-block">
+                <span className="text-xs font-black px-3 py-1 rounded-full bg-[#F59E0B] text-[#0B192C] uppercase tracking-wider mb-3 inline-block">
                   Andaman Islands Private Holidays
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-2">
@@ -177,7 +177,7 @@ export default function CustomizableCircuitsPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <Utensils className="w-4 h-4" />
                     <span>CP / MAP Meal Options</span>
@@ -186,7 +186,7 @@ export default function CustomizableCircuitsPage() {
                     Deluxe AC beach resort stays in Port Blair, Havelock & Neil Island with daily breakfast.
                   </p>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <Car className="w-4 h-4" />
                     <span>AC Road & Ferry Fleet</span>
@@ -195,7 +195,7 @@ export default function CustomizableCircuitsPage() {
                     AC Innova / Scorpio on islands + Premium AC high-speed catamaran ferry tickets included.
                   </p>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#060D17] border border-[#F59E0B]/20">
+                <div className="p-4 rounded-2xl bg-[#0B192C] border border-[#F59E0B]/20">
                   <div className="font-bold text-[#F59E0B] mb-1 flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Activities & Entry</span>
@@ -260,6 +260,41 @@ export default function CustomizableCircuitsPage() {
             </div>
           </div>
         )}
+      </section>
+
+      {/* AEO Voice Summary & Customizable Circuits Schema */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemPage",
+              "name": "Customizable Circuits (Ladakh LAD 01–08 & Andaman AND 01–05) | Rupkotha Travels",
+              "description":
+                "Tailored private travel programs with dedicated vehicles, MAP meal plans, and customized high-altitude and tropical itineraries.",
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rupkothatravels.com/" },
+                  { "@type": "ListItem", "position": 2, "name": "Customizable Circuits", "item": "https://rupkothatravels.com/customizable-circuits" },
+                ],
+              },
+            }),
+          }}
+        />
+
+        <div className="rounded-3xl bg-[#060D17] text-white border border-amber-500/30 p-8 sm:p-10 shadow-xl aeo-answer-block">
+          <span className="text-xs font-black px-3.5 py-1.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30 uppercase tracking-wider mb-3 inline-block">
+            AEO Private Circuits Direct Answer
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-3">
+            What customizable tour circuits does Rupkotha Travels provide?
+          </h2>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal voice-answer-summary">
+            Rupkotha Travels offers 8 bespoke Ladakh circuits (LAD 01–08) covering Pangong, Nubra, Turtuk, Hanle, and Siachen Base Camp with private SUVs and MAP meal plans, as well as 5 Andaman Island circuits (AND 01–05) covering Port Blair, Havelock, and Neil with luxury catamaran ferry transfers.
+          </p>
+        </div>
       </section>
 
       <Footer />

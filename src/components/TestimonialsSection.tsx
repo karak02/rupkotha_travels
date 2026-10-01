@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="reviews" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="reviews" className="py-24 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
@@ -104,7 +104,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Brand Trust Strip */}
-      <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-[#060D17] border border-white/10 text-center">
+      <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-[#0B192C] border border-white/10 text-center">
         <div className="p-3">
           <span className="font-serif text-2xl font-bold text-[#E0A96D]">18+</span>
           <p className="text-xs text-[#94A3B8] mt-1">Years of Luxury Curation</p>

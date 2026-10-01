@@ -36,10 +36,10 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
   return (
     <>
       {/* Top Announcement Bar - Clean, Single-Line Deep Midnight Navy */}
-      <div className="bg-[#0B192C] text-[#F8F9FA] text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 border-b border-[#0B192C] relative z-50">
+      <div className="bg-[#0B192C] text-[#F8F9FA] text-[11px] sm:text-xs py-1.5 sm:py-2 px-6 sm:px-10 lg:px-16 xl:px-20 border-b border-[#0B192C] relative z-50">
         <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-3 whitespace-nowrap overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-2.5 shrink-0">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#060D17] border border-[#F59E0B]/40 text-[#F59E0B] font-bold text-[10px] sm:text-[11px] uppercase tracking-wide">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#081426] border border-[#F59E0B]/40 text-[#F59E0B] font-bold text-[10px] sm:text-[11px] uppercase tracking-wide">
               <ShieldCheck className="w-3 h-3 text-[#F59E0B]" />
               Official Agent
             </span>
@@ -85,7 +85,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             : "bg-[#F8F9FA] py-3 border-b border-[#0B192C]/8"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center group shrink-0 py-1">
             <img
@@ -134,7 +134,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           <div className="flex items-center gap-2 shrink-0">
             <Link
               href="/booking"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_4px_16px_rgba(245,158,11,0.4)] hover:scale-102 active:scale-98 transition-all border border-[#0B192C]/10 shadow-xs whitespace-nowrap group"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-bold text-[#0B192C] bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_4px_16px_rgba(245,158,11,0.4)] hover:scale-102 active:scale-98 transition-all border border-[#0B192C]/10 shadow-xs whitespace-nowrap group"
             >
               <span>Book Journey</span>
               <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -193,7 +193,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               <Link
                 href="/booking"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm"
+                className="w-full py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-[#0B192C] font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm"
               >
                 <span>Book Journey</span>
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />

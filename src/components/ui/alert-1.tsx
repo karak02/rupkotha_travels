@@ -54,7 +54,7 @@ const alertVariants = cva("flex items-stretch w-full gap-2 group-[.toaster]:w-(-
       variant: "success",
       appearance: "solid",
       className:
-        "bg-[var(--color-success,#f59e0b)] text-[var(--color-success-foreground,#060d17)] font-bold",
+        "bg-[var(--color-success,#f59e0b)] text-[var(--color-success-foreground,#0b192c)] font-bold",
     },
     {
       variant: "info",
@@ -66,12 +66,12 @@ const alertVariants = cva("flex items-stretch w-full gap-2 group-[.toaster]:w-(-
       variant: "warning",
       appearance: "solid",
       className:
-        "bg-[var(--color-warning,#f59e0b)] text-[var(--color-warning-foreground,#060d17)] font-bold",
+        "bg-[var(--color-warning,#f59e0b)] text-[var(--color-warning-foreground,#0b192c)] font-bold",
     },
     {
       variant: "mono",
       appearance: "solid",
-      className: "bg-zinc-950 text-white dark:bg-zinc-300 dark:text-black *:data-slot-[alert=close]:text-white",
+      className: "bg-[#0b192c] text-white dark:bg-zinc-300 dark:text-[#0b192c] *:data-slot-[alert=close]:text-white",
     },
     {
       variant: "secondary",

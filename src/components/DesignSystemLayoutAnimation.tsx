@@ -223,7 +223,7 @@ export default function DesignSystemLayoutAnimation() {
   }, []);
 
   return (
-    <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-[#020617] text-[#F8FAFC] border-t border-b border-slate-800/80 overflow-hidden select-none">
+    <section className="relative w-full py-24 px-6 sm:px-10 lg:px-16 xl:px-20 bg-[#020617] text-[#F8FAFC] border-t border-b border-slate-800/80 overflow-hidden select-none">
       {/* CAD Blueprint High-Tech Grid Background */}
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
@@ -265,7 +265,7 @@ export default function DesignSystemLayoutAnimation() {
                 onClick={() => setViewMode("grid")}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
                   viewMode === "grid"
-                    ? "bg-cyan-500 text-slate-950 shadow-[0_0_15px_rgba(0,242,254,0.4)]"
+                    ? "bg-cyan-500 text-[#0B192C] shadow-[0_0_15px_rgba(0,242,254,0.4)]"
                     : "text-slate-400 hover:text-white"
                 }`}
                 title="Switch to 4-Column Grid View"
@@ -278,7 +278,7 @@ export default function DesignSystemLayoutAnimation() {
                 onClick={() => setViewMode("list")}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all ${
                   viewMode === "list"
-                    ? "bg-cyan-500 text-slate-950 shadow-[0_0_15px_rgba(0,242,254,0.4)]"
+                    ? "bg-cyan-500 text-[#0B192C] shadow-[0_0_15px_rgba(0,242,254,0.4)]"
                     : "text-slate-400 hover:text-white"
                 }`}
                 title="Switch to 1-Column List View"
@@ -350,7 +350,7 @@ export default function DesignSystemLayoutAnimation() {
                   <div className="flex items-center justify-between gap-2">
                     <motion.span
                       layoutId={`card-tag-${token.id}`}
-                      className="px-2.5 py-0.5 rounded bg-slate-950 border border-slate-800 text-[10px] font-mono font-bold text-cyan-400"
+                      className="px-2.5 py-0.5 rounded bg-[#0B192C] border border-slate-800 text-[10px] font-mono font-bold text-cyan-400"
                     >
                       {token.tag}
                     </motion.span>
@@ -403,7 +403,7 @@ export default function DesignSystemLayoutAnimation() {
                     )}
                   </div>
 
-                  <div className="w-8 h-8 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center text-slate-400 group-hover:text-cyan-400 group-hover:border-cyan-500/40 transition-all shadow-md">
+                  <div className="w-8 h-8 rounded-xl bg-[#0B192C] border border-slate-800 flex items-center justify-center text-slate-400 group-hover:text-cyan-400 group-hover:border-cyan-500/40 transition-all shadow-md">
                     <Maximize2 className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
                   </div>
                 </div>
@@ -423,7 +423,7 @@ export default function DesignSystemLayoutAnimation() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
                 onClick={() => setSelectedToken(null)}
-                className="absolute inset-0 bg-slate-950/80 backdrop-blur-xl"
+                className="absolute inset-0 bg-[#0B192C]/80 backdrop-blur-xl"
               />
 
               {/* Centered Expanded Morphing Modal Container */}
@@ -451,7 +451,7 @@ export default function DesignSystemLayoutAnimation() {
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedToken(null)}
-                  className="absolute top-6 right-6 w-9 h-9 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-400 hover:text-white transition-colors z-20"
+                  className="absolute top-6 right-6 w-9 h-9 rounded-xl bg-[#0B192C] border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-400 hover:text-white transition-colors z-20"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -461,7 +461,7 @@ export default function DesignSystemLayoutAnimation() {
                   <div className="flex items-center gap-3">
                     <motion.span
                       layoutId={`card-tag-${selectedToken.id}`}
-                      className="px-3 py-1 rounded-lg bg-slate-950 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-400 shadow-md"
+                      className="px-3 py-1 rounded-lg bg-[#0B192C] border border-cyan-500/40 text-xs font-mono font-bold text-cyan-400 shadow-md"
                     >
                       {selectedToken.tag}
                     </motion.span>
@@ -486,7 +486,7 @@ export default function DesignSystemLayoutAnimation() {
                   </div>
 
                   {/* Highlight Metric Banner */}
-                  <div className="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 flex items-center justify-between">
+                  <div className="p-5 rounded-2xl bg-[#0B192C]/90 border border-slate-800 flex items-center justify-between">
                     <div>
                       <span className="text-xs font-mono text-slate-400 block">
                         CALIBRATED VALUE / TOKEN METRIC
@@ -514,7 +514,7 @@ export default function DesignSystemLayoutAnimation() {
                   </p>
 
                   {/* Code Snippet Box */}
-                  <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-cyan-300 flex items-center justify-between">
+                  <div className="p-3.5 rounded-xl bg-[#0B192C] border border-slate-800 text-xs font-mono text-cyan-300 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Terminal className="w-3.5 h-3.5 text-cyan-400" />
                       <code>{selectedToken.codeSnippet}</code>
@@ -529,7 +529,7 @@ export default function DesignSystemLayoutAnimation() {
                     {selectedToken.details.map((item, idx) => (
                       <div
                         key={idx}
-                        className="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80"
+                        className="p-3 rounded-xl bg-[#0B192C]/50 border border-slate-800/80"
                       >
                         <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">
                           {item.label}
@@ -544,11 +544,11 @@ export default function DesignSystemLayoutAnimation() {
                   {/* Footer Actions */}
                   <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-4">
                     <span className="text-xs font-mono text-slate-500">
-                      Press <kbd className="px-1.5 py-0.5 bg-slate-950 border border-slate-800 rounded text-cyan-400">ESC</kbd> or click outside to dismiss
+                      Press <kbd className="px-1.5 py-0.5 bg-[#0B192C] border border-slate-800 rounded text-cyan-400">ESC</kbd> or click outside to dismiss
                     </span>
                     <button
                       onClick={() => setSelectedToken(null)}
-                      className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-black transition-all shadow-[0_0_15px_rgba(0,242,254,0.3)]"
+                      className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-[#0B192C] text-xs font-mono font-black transition-all shadow-[0_0_15px_rgba(0,242,254,0.3)]"
                     >
                       CLOSE SPEC
                     </button>

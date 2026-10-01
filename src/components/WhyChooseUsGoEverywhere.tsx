@@ -83,7 +83,7 @@ export default function WhyChooseUsGoEverywhere() {
   ];
 
   return (
-    <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 overflow-hidden">
+    <section className="py-14 sm:py-20 px-6 sm:px-10 lg:px-16 xl:px-20 max-w-7xl mx-auto relative z-20 overflow-hidden">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-wider mb-3 border border-amber-500/30 shadow-sm">
@@ -105,10 +105,10 @@ export default function WhyChooseUsGoEverywhere() {
       <div className="mt-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(245,158,11,0.3)]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#0B192C] text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(245,158,11,0.3)]"
         >
           <span>Learn Our Escorted Story</span>
-          <ArrowRight className="w-4 h-4 text-slate-950" />
+          <ArrowRight className="w-4 h-4 text-[#0B192C]" />
         </Link>
         <Link
           href="/fixed-departures"

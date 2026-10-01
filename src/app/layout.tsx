@@ -1,8 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
 export const viewport: Viewport = {
-  themeColor: "#0F3B27",
+  themeColor: "#0B192C",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -51,7 +64,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://rupkothatravels.com",
+    types: {
+      "text/plain": "https://rupkothatravels.com/llms.txt",
+    },
   },
   openGraph: {
     type: "website",
@@ -89,9 +105,10 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["TravelAgency", "TouristInformationCenter"],
+      "@type": ["TravelAgency", "TouristInformationCenter", "LocalBusiness"],
       "@id": "https://rupkothatravels.com/#agency",
-      "name": "Rupkotha Travels (রূপকথা ট্রাভেলস)",
+      "name": "Rupkotha Travels",
+      "alternateName": "রূপকথা ট্রাভেলস",
       "url": "https://rupkothatravels.com",
       "logo": "https://rupkothatravels.com/favicon.ico",
       "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
@@ -131,8 +148,30 @@ const structuredData = {
         { "@type": "AdministrativeArea", "name": "Himachal Pradesh" },
         { "@type": "AdministrativeArea", "name": "Sikkim" },
         { "@type": "AdministrativeArea", "name": "Rajasthan" },
-        { "@type": "AdministrativeArea", "name": "Kerala" },
+        { "@type": "AdministrativeArea", "name": "Andaman and Nicobar Islands" },
+        { "@type": "AdministrativeArea", "name": "Assam" },
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Rupkotha Travels Tour Packages",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Fixed Group Departures & Cultural Heritage",
+            "description": "Escorted group departures with train travel from Howrah and Sealdah.",
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "High-Altitude Himalayan Expeditions",
+            "description": "Mountain road trips and treks across Ladakh, Spiti, and Singalila ridge.",
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Eco-Forest Safaris & Coastal Holidays",
+            "description": "Certified eco-tours in Odisha, Chhattisgarh, Tadoba, and Andaman.",
+          },
+        ],
+      },
       "sameAs": [
         "https://wa.me/919830012345",
       ],
@@ -150,6 +189,18 @@ const structuredData = {
         "query-input": "required name=search_term_string",
       },
     },
+    {
+      "@type": "WebPage",
+      "@id": "https://rupkothatravels.com/#webpage",
+      "url": "https://rupkothatravels.com",
+      "name": "Rupkotha Travels | Kolkata Tour Operator & Govt Authorized Agent",
+      "isPartOf": { "@id": "https://rupkothatravels.com/#website" },
+      "about": { "@id": "https://rupkothatravels.com/#agency" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".aeo-answer-block", "h1", ".voice-answer-summary"],
+      },
+    },
   ],
 };
 
@@ -159,14 +210,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${jakarta.variable} ${bricolage.variable} scroll-smooth`}>
       <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Context" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-[#F7F9F7] text-[#0F3B27] font-sans antialiased selection:bg-[#92FF5F] selection:text-[#0F3B27]">
+      <body className="bg-[#F8F9FA] text-[#0B192C] font-sans antialiased selection:bg-[#F59E0B] selection:text-[#0B192C]">
         {children}
       </body>
     </html>
