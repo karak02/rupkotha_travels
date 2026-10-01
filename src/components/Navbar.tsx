@@ -35,21 +35,21 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
 
   return (
     <>
-      {/* Top Announcement Bar - Clean, Single-Line Deep Forest Green */}
-      <div className="bg-[#0F3B27] text-[#F7F9F7] text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 border-b border-[#0F3B27] relative z-50">
+      {/* Top Announcement Bar - Clean, Single-Line Deep Midnight Navy */}
+      <div className="bg-[#0B192C] text-[#F8F9FA] text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 border-b border-[#0B192C] relative z-50">
         <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-3 whitespace-nowrap overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-2.5 shrink-0">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#0F3B27] border border-[#92FF5F]/30 text-[#92FF5F] font-bold text-[10px] sm:text-[11px] uppercase tracking-wide">
-              <ShieldCheck className="w-3 h-3 text-[#92FF5F]" />
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#060D17] border border-[#F59E0B]/40 text-[#F59E0B] font-bold text-[10px] sm:text-[11px] uppercase tracking-wide">
+              <ShieldCheck className="w-3 h-3 text-[#F59E0B]" />
               Official Agent
             </span>
             <span className="text-white/90 font-normal hidden md:inline text-[11px] sm:text-xs">
               Authorized Partner for{" "}
-              <strong className="text-[#92FF5F] font-semibold">Eco Tour Odisha</strong>{" "}
+              <strong className="text-[#F59E0B] font-semibold">Eco Tour Odisha</strong>{" "}
               &{" "}
               <strong className="text-white font-semibold">Chhattisgarh Tourism</strong>
             </span>
-            <span className="text-[#52796F] hidden xl:inline text-[11px]">
+            <span className="text-[#64748B] hidden xl:inline text-[11px]">
               • Howrah, Sealdah & Kolkata
             </span>
           </div>
@@ -57,32 +57,32 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           <div className="flex items-center gap-3 sm:gap-4 font-medium shrink-0 ml-auto text-[11px] sm:text-xs">
             <a
               href="tel:+919830012345"
-              className="flex items-center gap-1 text-[#F7F9F7] hover:text-[#92FF5F] transition-colors"
+              className="flex items-center gap-1 text-[#F8F9FA] hover:text-[#F59E0B] transition-colors"
             >
-              <Phone className="w-3 h-3 text-[#92FF5F]" />
+              <Phone className="w-3 h-3 text-[#F59E0B]" />
               <span className="hidden sm:inline font-mono">+91 98300 12345</span>
               <span className="sm:hidden font-mono">Call</span>
             </a>
-            <span className="text-[#0F3B27]">|</span>
+            <span className="text-white/30">|</span>
             <a
               href="https://wa.me/919830012345?text=Hello%20Rupkotha%20Travels,%20I%20would%20like%20to%20inquire%20about%20upcoming%20nature%20and%20eco-tourism%20tours."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#92FF5F] hover:text-white transition-colors font-semibold"
+              className="flex items-center gap-1 text-[#F59E0B] hover:text-white transition-colors font-semibold"
             >
-              <MessageCircle className="w-3 h-3 fill-[#92FF5F]/20" />
+              <MessageCircle className="w-3 h-3 fill-[#F59E0B]/20 text-[#F59E0B]" />
               <span>WhatsApp Concierge</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation Bar - Warm Ivory (#F7F9F7) with Decreased Text & 1-Line Flow */}
+      {/* Main Navigation Bar - Warm Pearl Alabaster (#F8F9FA) with 1-Line Flow */}
       <header
         className={`sticky top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-[#F7F9F7]/95 backdrop-blur-md py-2.5 border-b border-[#0F3B27]/10 shadow-[0_4px_16px_-4px_rgba(15,59,39,0.06)]"
-            : "bg-[#F7F9F7] py-3 border-b border-[#0F3B27]/8"
+            ? "bg-[#F8F9FA]/95 backdrop-blur-md py-2.5 border-b border-[#0B192C]/10 shadow-[0_4px_16px_-4px_rgba(11,25,44,0.06)]"
+            : "bg-[#F8F9FA] py-3 border-b border-[#0B192C]/8"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
@@ -95,8 +95,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             />
           </Link>
 
-          {/* Desktop Navigation Links - Decreased text size, strictly single-line from lg up */}
-          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 text-xs xl:text-[13px] font-semibold text-[#0F3B27] whitespace-nowrap">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 text-xs xl:text-[13px] font-semibold text-[#0B192C] whitespace-nowrap">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -105,8 +105,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   href={link.href}
                   className={`relative py-1.5 px-2 xl:px-2.5 rounded-lg transition-all duration-150 flex items-center gap-1 xl:gap-1.5 whitespace-nowrap ${
                     isActive
-                      ? "text-[#0F3B27] font-bold bg-[#F7F9F7] shadow-xs"
-                      : "text-[#0F3B27]/85 hover:text-[#0F3B27] hover:bg-[#F7F9F7]/60"
+                      ? "text-[#0B192C] font-bold bg-[#FEF3C7]/60 shadow-xs"
+                      : "text-[#0B192C]/85 hover:text-[#0B192C] hover:bg-[#0B192C]/5"
                   }`}
                 >
                   <span>{link.name}</span>
@@ -118,11 +118,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     </span>
                   )}
 
-                  {/* Subtle Dark-Green Bottom Accent for Active State */}
+                  {/* Amber Gold Bottom Accent for Active State */}
                   {isActive && (
                     <motion.div
                       layoutId="activeNavBottomAccent"
-                      className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#0F3B27] rounded-full"
+                      className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#F59E0B] rounded-full"
                     />
                   )}
                 </Link>
@@ -134,7 +134,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           <div className="flex items-center gap-2 shrink-0">
             <Link
               href="/booking"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-bold text-[#0F3B27] bg-[#92FF5F] hover:bg-[#7ce648] hover:shadow-[0_4px_14px_rgba(146,255,95,0.35)] hover:scale-102 active:scale-98 transition-all border border-[#0F3B27]/15 shadow-xs whitespace-nowrap group"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 hover:shadow-[0_4px_16px_rgba(245,158,11,0.4)] hover:scale-102 active:scale-98 transition-all border border-[#0B192C]/10 shadow-xs whitespace-nowrap group"
             >
               <span>Book Journey</span>
               <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -143,13 +143,13 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl bg-[#0F3B27] text-white hover:bg-[#0F3B27] transition-colors shrink-0"
+              className="lg:hidden p-2 rounded-xl bg-[#0B192C] text-white hover:bg-[#1E3E62] transition-colors shrink-0"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-5 h-5 text-[#92FF5F]" />
+                <X className="w-5 h-5 text-amber-400" />
               ) : (
-                <Menu className="w-5 h-5 text-[#92FF5F]" />
+                <Menu className="w-5 h-5 text-amber-400" />
               )}
             </button>
           </div>
@@ -164,7 +164,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden bg-[#F7F9F7] border-b border-[#0F3B27]/15 px-4 pt-3 pb-5 space-y-1.5 sticky top-[57px] z-30 shadow-2xl"
+            className="lg:hidden bg-[#F8F9FA] border-b border-[#0B192C]/15 px-4 pt-3 pb-5 space-y-1.5 sticky top-[57px] z-30 shadow-2xl"
           >
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -175,8 +175,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                     isActive
-                      ? "bg-[#F7F9F7] text-[#0F3B27] border-l-4 border-[#0F3B27]"
-                      : "text-[#0F3B27] hover:bg-[#F7F9F7]/50"
+                      ? "bg-[#FEF3C7] text-[#0B192C] border-l-4 border-[#F59E0B]"
+                      : "text-[#0B192C] hover:bg-[#0B192C]/5"
                   }`}
                 >
                   <span>{link.name}</span>
@@ -189,11 +189,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               );
             })}
 
-            <div className="pt-3 mt-1.5 border-t border-[#0F3B27]/10">
+            <div className="pt-3 mt-1.5 border-t border-[#0B192C]/10">
               <Link
                 href="/booking"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-full bg-[#92FF5F] text-[#0F3B27] font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm"
+                className="w-full py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm"
               >
                 <span>Book Journey</span>
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />

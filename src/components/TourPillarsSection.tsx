@@ -9,22 +9,22 @@ export default function TourPillarsSection() {
   const icons = [Train, Mountain, Trees];
   const cardThemes = [
     {
-      cardBg: "bg-[#0F3B27] text-[#F7F9F7] border-[#92FF5F]/30",
-      pillBg: "bg-[#92FF5F] text-[#0F3B27]",
-      subBg: "bg-[#0F3B27]",
-      btnBg: "bg-[#92FF5F] text-[#0F3B27]",
+      cardBg: "bg-[#0B192C] text-[#F8F9FA] border-[#F59E0B]/30",
+      pillBg: "bg-[#F59E0B] text-[#060D17]",
+      subBg: "bg-[#060D17] border-[#F59E0B]/20 text-white/90",
+      btnBg: "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 hover:from-amber-300 hover:to-amber-400",
     },
     {
-      cardBg: "bg-[#FFFFFF] text-[#0F3B27] border-[#0F3B27]/15",
-      pillBg: "bg-[#92FF5F] text-[#0F3B27]",
-      subBg: "bg-[#F7F9F7] border-[#0F3B27]/10",
-      btnBg: "bg-[#0F3B27] text-white",
+      cardBg: "bg-[#FFFFFF] text-[#0B192C] border-[#0B192C]/10",
+      pillBg: "bg-[#FEF3C7] text-[#0B192C] border border-[#F59E0B]/30",
+      subBg: "bg-[#F8F9FA] border-[#0B192C]/10 text-[#0B192C]",
+      btnBg: "bg-[#0B192C] text-[#F59E0B] hover:bg-[#1E3E62]",
     },
     {
-      cardBg: "bg-[#F7F9F7] text-[#0F3B27] border-[#0F3B27]/20",
+      cardBg: "bg-[#F8F9FA] text-[#0B192C] border-[#0B192C]/15",
       pillBg: "bg-[#FF7036] text-white",
-      subBg: "bg-[#F7F9F7] border-[#0F3B27]/10",
-      btnBg: "bg-[#0F3B27] text-white",
+      subBg: "bg-white border-[#0B192C]/10 text-[#0B192C]",
+      btnBg: "bg-[#0B192C] text-white hover:bg-[#1E3E62]",
     },
   ];
 
@@ -32,20 +32,20 @@ export default function TourPillarsSection() {
     <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0F3B27] text-[#92FF5F] text-[11px] font-black uppercase tracking-wider mb-2 shadow-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B192C] text-[#F59E0B] text-[11px] font-black uppercase tracking-wider mb-2 shadow-md border border-[#F59E0B]/30">
             <span>Our 3 Core Categories</span>
           </div>
-          <h2 className="font-serif text-xl sm:text-3xl font-extrabold text-[#0F3B27] tracking-tight">
+          <h2 className="font-serif text-xl sm:text-3xl font-extrabold text-[#0B192C] tracking-tight">
             Curated Expedition Formats
           </h2>
-          <p className="mt-1 text-xs sm:text-sm text-[#52796F] max-w-2xl font-normal">
+          <p className="mt-1 text-xs sm:text-sm text-[#64748B] max-w-2xl font-normal">
             Pre-arranged train departures with full Bengali meal service, remote Himalayan passes, and wildlife safaris.
           </p>
         </div>
 
         <Link
           href="/tour-categories"
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0F3B27] hover:text-[#195237] transition-colors group self-start md:self-auto px-3.5 py-1.5 rounded-xl bg-white border border-[#0F3B27]/15 shadow-xs"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0B192C] hover:text-[#F59E0B] transition-colors group self-start md:self-auto px-3.5 py-1.5 rounded-xl bg-white border border-[#0B192C]/15 shadow-xs"
         >
           <span>Explore All 3 Categories</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-[#FF7036]" />
@@ -70,7 +70,7 @@ export default function TourPillarsSection() {
               <div>
                 {/* Header Badge & Icon */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#0F3B27] text-[#92FF5F] flex items-center justify-center shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-[#0B192C] text-[#F59E0B] border border-[#F59E0B]/30 flex items-center justify-center shadow-md">
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className={`text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider ${theme.pillBg}`}>
@@ -101,7 +101,7 @@ export default function TourPillarsSection() {
 
                 {/* Ideal For */}
                 <div className="flex items-start gap-1.5 text-[11px] font-medium opacity-85">
-                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#92FF5F]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#F59E0B]" />
                   <span className="line-clamp-1">
                     <strong>Ideal For:</strong> {cat.idealFor}
                   </span>

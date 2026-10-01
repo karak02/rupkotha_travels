@@ -25,8 +25,8 @@ export const TOUR_CATEGORIES = [
     type: 1,
     title: "Fixed Group Departures & Cultural Heritage",
     tagline: "Pre-scheduled escorted journeys with seamless train & ground transit",
-    color: "#92FF5F", // Signal Lime
-    bgLight: "#F7F9F7", // Mint
+    color: "#F59E0B", // Royal Amber Gold
+    bgLight: "#FEF3C7", // Champagne Gold Light
     description: "Pre-scheduled fixed-date escorted journeys featuring train travel, coordinated ground vehicles, hand-picked accommodations, and daily wholesome meals.",
     keyFocus: "Rajasthan royal palaces, Madhya Pradesh Jyotirlingas, Nagaland tribal culture, and Bastar tribal heritage.",
     idealFor: "Families, senior travelers, and cultural enthusiasts who prefer an all-inclusive, fully coordinated group experience.",
@@ -37,8 +37,8 @@ export const TOUR_CATEGORIES = [
     type: 2,
     title: "High-Altitude Himalayan Expeditions",
     tagline: "Peaks, lakes, glacial valleys & ancient gompas",
-    color: "#92FF5F", // Ice
-    bgLight: "#92FF5F",
+    color: "#E0A96D", // Warm Sunlit Sand Gold
+    bgLight: "#F8F9FA",
     description: "Thoroughly planned high-elevation mountain road trips and scenic treks through remote landscapes, ancient monasteries, high passes, and glacial lakes.",
     keyFocus: "Ladakh with Siachen, Zanskar Valley, Lahaul & Spiti with Chandratal, Sandakphu Singalila Ridge, Arunachal Pradesh, Sikkim, and Bhutan.",
     idealFor: "Adventure lovers, photographers, and high-altitude road trippers.",

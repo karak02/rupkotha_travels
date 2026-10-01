@@ -508,14 +508,14 @@ export default function MountainExploreShowcase() {
         {/* Main Foreground Interactive Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col justify-between flex-1 w-full">
           {/* Top Telemetry Header Bar & Mobile-Friendly Expedition Toggle Bar */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-amber-500/20">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#0F3B27] border border-[#92FF5F]/40 flex items-center justify-center text-[#92FF5F] shadow-lg shrink-0">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#0B111E] border border-amber-500/40 flex items-center justify-center text-amber-400 shadow-lg shrink-0">
                   <Mountain className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[8.5px] sm:text-[9px] font-mono font-bold uppercase tracking-widest text-[#92FF5F] block">
+                  <span className="text-[8.5px] sm:text-[9px] font-mono font-bold uppercase tracking-widest text-amber-400 block">
                     HIMALAYAN &amp; NATURE EXPEDITIONS
                   </span>
                   <h2 className="font-serif text-sm sm:text-base md:text-lg font-bold text-white leading-none">
@@ -532,7 +532,7 @@ export default function MountainExploreShowcase() {
                       prev === 0 ? HIMALAYAN_EXPEDITIONS.length - 1 : prev - 1
                     )
                   }
-                  className="w-8 h-8 rounded-full bg-[#0F3B27] border border-[#92FF5F]/30 text-[#92FF5F] flex items-center justify-center active:scale-95 transition-all shadow-md"
+                  className="w-8 h-8 rounded-full bg-[#0B111E] border border-amber-500/30 text-amber-400 flex items-center justify-center active:scale-95 transition-all shadow-md"
                   aria-label="Previous Expedition"
                 >
                   <span className="text-xs">‹</span>
@@ -543,7 +543,7 @@ export default function MountainExploreShowcase() {
                       (prev + 1) % HIMALAYAN_EXPEDITIONS.length
                     )
                   }
-                  className="w-8 h-8 rounded-full bg-[#0F3B27] border border-[#92FF5F]/30 text-[#92FF5F] flex items-center justify-center active:scale-95 transition-all shadow-md"
+                  className="w-8 h-8 rounded-full bg-[#0B111E] border border-amber-500/30 text-amber-400 flex items-center justify-center active:scale-95 transition-all shadow-md"
                   aria-label="Next Expedition"
                 >
                   <span className="text-xs">›</span>
@@ -559,8 +559,8 @@ export default function MountainExploreShowcase() {
                   onClick={() => setActivePeakIndex(idx)}
                   className={`px-3 py-1.5 sm:py-1 rounded-full text-xs font-mono font-bold transition-all border whitespace-nowrap cursor-pointer shrink-0 touch-manipulation ${
                     idx === activePeakIndex
-                      ? "bg-[#92FF5F] text-[#0F3B27] border-[#92FF5F] shadow-[0_0_15px_rgba(146,255,95,0.35)] scale-102"
-                      : "bg-[#0F3B27]/80 text-white/70 border-white/10 hover:border-white/30 hover:text-white active:bg-white/10"
+                      ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.4)] scale-102"
+                      : "bg-[#0B111E]/80 text-white/70 border-white/10 hover:border-amber-500/40 hover:text-white active:bg-white/10"
                   }`}
                 >
                   {exp.number}. {exp.name.split(" ")[0]}
@@ -587,7 +587,7 @@ export default function MountainExploreShowcase() {
                     <span className="px-2.5 py-0.5 rounded-full bg-[#FF7036] text-white text-[10px] font-black uppercase tracking-wider shadow-md">
                       Expedition {activeExpedition.number} / 07
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#0F3B27] border border-[#92FF5F]/40 text-[#92FF5F] text-[11px] font-mono font-bold">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#0B111E] border border-amber-500/40 text-amber-300 text-[11px] font-mono font-bold">
                       ELEVATION: {activeExpedition.elevation}
                     </span>
                     <span className="text-[11px] font-mono text-white/60">
@@ -600,7 +600,7 @@ export default function MountainExploreShowcase() {
                     <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.05]">
                       {activeExpedition.name}
                     </h1>
-                    <p className="mt-1 text-sm sm:text-base font-medium text-[#92FF5F]">
+                    <p className="mt-1 text-sm sm:text-base font-medium text-amber-300">
                       {activeExpedition.tagline}
                     </p>
                   </div>
@@ -612,8 +612,8 @@ export default function MountainExploreShowcase() {
 
                   {/* Live Expedition Telemetry HUD Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
-                    <div className="p-2.5 rounded-xl bg-[#0F3B27]/70 backdrop-blur-md border border-white/10">
-                      <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-[#92FF5F] mb-0.5">
+                    <div className="p-2.5 rounded-xl bg-[#0B111E]/80 backdrop-blur-md border border-amber-500/20">
+                      <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-amber-400 mb-0.5">
                         <Thermometer className="w-3 h-3" />
                         <span>TEMP RANGE</span>
                       </div>
@@ -622,7 +622,7 @@ export default function MountainExploreShowcase() {
                       </span>
                     </div>
 
-                    <div className="p-2.5 rounded-xl bg-[#0F3B27]/70 backdrop-blur-md border border-white/10">
+                    <div className="p-2.5 rounded-xl bg-[#0B111E]/80 backdrop-blur-md border border-amber-500/20">
                       <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-[#FF7036] mb-0.5">
                         <Wind className="w-3 h-3" />
                         <span>WIND GALE</span>
@@ -632,8 +632,8 @@ export default function MountainExploreShowcase() {
                       </span>
                     </div>
 
-                    <div className="p-2.5 rounded-xl bg-[#0F3B27]/70 backdrop-blur-md border border-white/10">
-                      <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-[#92FF5F] mb-0.5">
+                    <div className="p-2.5 rounded-xl bg-[#0B111E]/80 backdrop-blur-md border border-amber-500/20">
+                      <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-amber-400 mb-0.5">
                         <Compass className="w-3 h-3" />
                         <span>COORDINATES</span>
                       </div>
@@ -642,7 +642,7 @@ export default function MountainExploreShowcase() {
                       </span>
                     </div>
 
-                    <div className="p-2.5 rounded-xl bg-[#0F3B27]/70 backdrop-blur-md border border-white/10">
+                    <div className="p-2.5 rounded-xl bg-[#0B111E]/80 backdrop-blur-md border border-amber-500/20">
                       <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase text-yellow-300 mb-0.5">
                         <Shield className="w-3 h-3" />
                         <span>DIFFICULTY</span>
@@ -659,7 +659,7 @@ export default function MountainExploreShowcase() {
                       href={`/booking?package=${encodeURIComponent(
                         activeExpedition.name
                       )}`}
-                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#92FF5F] text-[#0F3B27] font-black text-xs uppercase tracking-wider hover:bg-[#92FF5F] transition-all shadow-[0_0_20px_rgba(146,255,95,0.3)] group"
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] group"
                     >
                       <span>Book Now</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -671,7 +671,7 @@ export default function MountainExploreShowcase() {
                       }
                       className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                     >
-                      <Eye className="w-3.5 h-3.5 text-[#92FF5F]" />
+                      <Eye className="w-3.5 h-3.5 text-amber-400" />
                       <span>View Details</span>
                     </button>
                   </div>
@@ -688,7 +688,7 @@ export default function MountainExploreShowcase() {
                 }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative w-full max-w-sm h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.7)] group cursor-pointer"
+                className="relative w-full max-w-sm h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden border border-amber-500/20 shadow-[0_20px_40px_rgba(0,0,0,0.7)] group cursor-pointer"
                 onClick={() => setSelectedTourModal(activeExpedition.tourData)}
               >
                 <img
@@ -696,19 +696,19 @@ export default function MountainExploreShowcase() {
                   alt={activeExpedition.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F3B27] via-transparent to-transparent opacity-85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-transparent to-transparent opacity-85" />
 
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#0F3B27]/90 backdrop-blur-md text-[#92FF5F] text-[11px] font-mono font-bold border border-[#92FF5F]/30">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#060D17]/90 backdrop-blur-md text-amber-300 text-[11px] font-mono font-bold border border-amber-500/30">
                     {activeExpedition.coordinates}
                   </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-white/90 text-[#0F3B27] text-[11px] font-black">
+                  <span className="px-2.5 py-0.5 rounded-full bg-white/90 text-[#0B192C] text-[11px] font-black">
                     {activeExpedition.elevation}
                   </span>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 space-y-1">
-                  <span className="text-[9px] font-mono uppercase tracking-widest text-[#92FF5F] block">
+                  <span className="text-[9px] font-mono uppercase tracking-widest text-amber-400 block">
                     EXPEDITION DOSSIER • CLICK FOR DETAILS
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-bold text-white leading-tight">
@@ -723,9 +723,9 @@ export default function MountainExploreShowcase() {
           </div>
 
           {/* Bottom Pagination & Expedition Tracker */}
-          <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-white/50 font-mono">
+          <div className="pt-3 border-t border-amber-500/15 flex flex-wrap items-center justify-between gap-2 text-[11px] text-white/50 font-mono">
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#92FF5F] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
               <span className="hidden sm:inline">Interactive 3D Himalayan Ridge &amp; Expedition Explorer</span>
               <span className="sm:hidden">Himalayan Ridge Explorer</span>
             </div>
@@ -740,7 +740,7 @@ export default function MountainExploreShowcase() {
                     aria-label={`Go to expedition ${dotIdx + 1}`}
                     className={`transition-all rounded-full ${
                       dotIdx === activePeakIndex
-                        ? "w-4 h-1.5 bg-[#92FF5F]"
+                        ? "w-4 h-1.5 bg-amber-400"
                         : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
                     }`}
                   />
@@ -748,7 +748,7 @@ export default function MountainExploreShowcase() {
               </div>
 
               <div className="flex items-center gap-1">
-                <span className="text-[#92FF5F] font-bold">EXPEDITION {activeExpedition.number}</span>
+                <span className="text-amber-400 font-bold">EXPEDITION {activeExpedition.number}</span>
                 <span className="text-white/20">/</span>
                 <span>07</span>
               </div>

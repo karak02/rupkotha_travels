@@ -86,14 +86,14 @@ export default function WhyChooseUsGoEverywhere() {
     <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 overflow-hidden">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3B27] text-[#92FF5F] text-xs font-black uppercase tracking-wider mb-3 shadow-md">
-          <Award className="w-3.5 h-3.5" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-wider mb-3 border border-amber-500/30 shadow-sm">
+          <Award className="w-3.5 h-3.5 text-amber-500" />
           <span>Why Choose Rupkotha Travels</span>
         </div>
-        <h2 className="font-serif text-2xl sm:text-4xl font-black text-[#0F3B27] tracking-tight">
+        <h2 className="font-serif text-2xl sm:text-4xl font-black text-[#0B192C] tracking-tight">
           The Gold Standard of Escorted Holidays
         </h2>
-        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-[#52796F] font-normal leading-relaxed">
+        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed">
           Inspired by Bengal’s grand tradition of leisurely exploration, our 7 verified standards guarantee zero hidden charges, premium accommodations, and personalized family care.
         </p>
       </div>
@@ -105,16 +105,16 @@ export default function WhyChooseUsGoEverywhere() {
       <div className="mt-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0F3B27] text-[#92FF5F] text-xs sm:text-sm font-black uppercase tracking-wider hover:bg-[#144D34] transition-all shadow-lg"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-[0_4px_15px_rgba(245,158,11,0.3)]"
         >
           <span>Learn Our Escorted Story</span>
-          <ArrowRight className="w-4 h-4 text-[#FF7036]" />
+          <ArrowRight className="w-4 h-4 text-slate-950" />
         </Link>
         <Link
           href="/fixed-departures"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#0F3B27] text-xs sm:text-sm font-bold border border-[#0F3B27]/20 hover:bg-[#F7F9F7] transition-all shadow-xs"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B192C] text-amber-400 text-xs sm:text-sm font-bold border border-amber-500/30 hover:border-amber-400 transition-all shadow-sm"
         >
-          <Sparkles className="w-4 h-4 text-[#FF7036]" />
+          <Sparkles className="w-4 h-4 text-amber-400" />
           <span>View 13 Fixed Departures</span>
         </Link>
       </div>

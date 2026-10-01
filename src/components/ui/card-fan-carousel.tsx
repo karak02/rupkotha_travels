@@ -37,25 +37,25 @@ const FAN_POSITIONS = [
 ];
 
 function getResponsiveMultiplier(width: number) {
-  if (width < 480) return 0.28;
-  if (width < 640) return 0.38;
-  if (width < 768) return 0.5;
-  if (width < 1024) return 0.75;
-  return 1.0;
+  if (width < 480) return 0.22;
+  if (width < 640) return 0.32;
+  if (width < 768) return 0.45;
+  if (width < 1024) return 0.68;
+  return 0.92;
 }
 
 function getHeightMultiplier(width: number) {
   let idealPx: number;
-  if (width < 480) idealPx = 13 * 16;       // 208px
-  else if (width < 640) idealPx = 15 * 16;  // 240px
-  else if (width < 768) idealPx = 17 * 16;  // 272px
-  else if (width < 1024) idealPx = 19 * 16; // 304px
-  else idealPx = 21 * 16;                    // 336px
+  if (width < 480) idealPx = 16 * 16;       // 256px
+  else if (width < 640) idealPx = 18 * 16;  // 288px
+  else if (width < 768) idealPx = 21 * 16;  // 336px
+  else if (width < 1024) idealPx = 24 * 16; // 384px
+  else idealPx = 27 * 16;                    // 432px
 
   if (typeof window === "undefined") return 1;
-  const available = window.innerHeight * 0.55;
+  const available = window.innerHeight * 0.65;
   if (available >= idealPx) return 1;
-  return Math.max(0.55, available / idealPx);
+  return Math.max(0.6, available / idealPx);
 }
 
 function getSlotConfig(slot: number) {
@@ -75,7 +75,7 @@ function getSlotConfig(slot: number) {
 }
 
 const ARROW_CLASSES =
-  "relative flex items-center justify-center rounded-full border-[1.5px] border-[#0F3B27]/20 dark:border-white/10 bg-white/95 dark:bg-white/10 backdrop-blur-[16px] text-[#0F3B27] dark:text-white/90 cursor-pointer shrink-0 z-30 outline-none shadow-[0_6px_20px_rgba(15,59,39,0.12)] hover:border-[#0F3B27]/50 hover:bg-[#0F3B27] hover:text-[#92FF5F] active:scale-90 transition-all duration-300 before:content-[''] before:absolute before:inset-[3px] before:rounded-full before:border before:border-[#0F3B27]/[0.05] before:pointer-events-none";
+  "relative flex items-center justify-center rounded-full border-2 border-amber-500/60 bg-[#0B192C] text-amber-400 cursor-pointer shrink-0 z-30 outline-none shadow-[0_6px_25px_rgba(245,158,11,0.35)] hover:border-amber-400 hover:bg-gradient-to-r hover:from-amber-400 hover:to-amber-500 hover:text-slate-950 active:scale-95 transition-all duration-300";
 
 export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,6 +83,10 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
   const hasEntered = useRef(false);
   const directionRef = useRef<"left" | "right" | null>(null);
   const prevVisible = useRef<Set<number>>(new Set());
+
+  // Touch swipe tracking for mobile responsiveness
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   const totalCards = cards.length;
   const needsPagination = totalCards > 1;
@@ -116,6 +120,28 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
     directionRef.current = targetIndex > centerIndex ? "right" : "left";
     setCenterIndex(targetIndex);
   }, [centerIndex]);
+
+  // Touch handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    const diffY = touchStartY.current - e.changedTouches[0].clientY;
+
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        cycle("right");
+      } else {
+        cycle("left");
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   useEffect(() => {
     const container = containerRef.current;
@@ -309,15 +335,31 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
   if (!totalCards) return null;
 
   const chevron = (direction: "left" | "right") => (
-    <svg className="relative z-[2] w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="relative z-[2] w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <polyline points={direction === "left" ? "15 18 9 12 15 6" : "9 18 15 12 9 6"} />
     </svg>
   );
 
   return (
-    <section className="flex flex-col items-center w-full py-2 lg:py-4 px-3 sm:px-6 relative z-20 overflow-visible">
-      <div className="flex items-center justify-center w-full max-w-[80rem]">
-        <div ref={containerRef} className="fan-layout relative flex items-center justify-center w-full h-[14rem] sm:h-[16.5rem] md:h-[18.5rem] lg:h-[20.5rem]">
+    <section
+      className="flex flex-col items-center w-full py-2 lg:py-4 px-2 sm:px-6 relative z-20 overflow-visible"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="relative flex items-center justify-center w-full max-w-[84rem]">
+        {/* Floating Side Left Arrow */}
+        {needsPagination && (
+          <button
+            onClick={() => cycle("left")}
+            className={`${ARROW_CLASSES} hidden sm:flex absolute left-2 sm:left-4 md:left-8 w-11 h-11 sm:w-12 sm:h-12 z-40`}
+            aria-label="Previous standard"
+            title="Previous standard"
+          >
+            {chevron("left")}
+          </button>
+        )}
+
+        <div ref={containerRef} className="fan-layout relative flex items-center justify-center w-full">
           {cards.map((card, index) => {
             const Icon = card.icon;
             const isCenter = index === centerIndex;
@@ -325,7 +367,7 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
             const cardContent = (
               <div
                 className={`relative w-full h-full overflow-hidden rounded-[inherit] transition-all duration-300 ${
-                  isCenter ? "ring-3 ring-[#92FF5F] shadow-[0_20px_40px_-10px_rgba(15,59,39,0.5)]" : ""
+                  isCenter ? "ring-4 ring-amber-400 shadow-[0_20px_45px_-10px_rgba(245,158,11,0.6)]" : ""
                 }`}
               >
                 <img
@@ -335,45 +377,45 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                   className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-700 hover:scale-105"
                 />
                 
-                {/* Subtle Luxury Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#082015]/95 via-[#0F3B27]/45 to-black/20 z-20 pointer-events-none" />
+                {/* Subtle Luxury Gradient Overlay in Midnight Obsidian */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060D17] via-[#0B192C]/65 to-black/30 z-20 pointer-events-none" />
 
-                {/* Optional Rich Content Layer */}
+                {/* Rich Content Layer */}
                 {(card.title || card.badge || card.tagline) && (
-                  <div className="absolute inset-0 z-20 flex flex-col justify-between p-3 sm:p-3.5 text-white pointer-events-none">
-                    <div className="flex items-center justify-between gap-1">
+                  <div className="absolute inset-0 z-20 flex flex-col justify-between p-3.5 sm:p-4 text-white pointer-events-none">
+                    <div className="flex items-center justify-between gap-1.5">
                       {card.badge && (
-                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[8.5px] sm:text-[9.5px] font-black tracking-wider uppercase backdrop-blur-md border shadow-xs ${
+                        <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] sm:text-[10px] font-black tracking-wider uppercase backdrop-blur-md border shadow-md ${
                           isCenter
-                            ? "bg-[#92FF5F] text-[#0F3B27] border-[#92FF5F]"
-                            : "bg-[#0F3B27]/90 text-[#92FF5F] border-[#92FF5F]/30"
+                            ? "bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 border-amber-300 shadow-[0_2px_10px_rgba(245,158,11,0.5)]"
+                            : "bg-[#0B192C]/90 text-amber-400 border-amber-500/40"
                         }`}>
-                          {Icon && <Icon className="w-2.5 h-2.5" />}
+                          {Icon && <Icon className="w-3 h-3" />}
                           {card.badge}
                         </span>
                       )}
                       {card.tagline && (
-                        <span className="text-[8.5px] sm:text-[9px] font-bold text-white/90 tracking-wide uppercase">
+                        <span className="text-[9px] sm:text-[10px] font-bold text-amber-200 tracking-wider uppercase drop-shadow-sm">
                           {card.tagline}
                         </span>
                       )}
                     </div>
 
-                    <div>
+                    <div className="space-y-1">
                       {card.title && (
-                        <h3 className="font-serif text-[11px] sm:text-xs md:text-sm font-bold text-white leading-snug drop-shadow-md mb-0.5 line-clamp-1">
+                        <h3 className="font-serif text-xs sm:text-sm md:text-base font-bold text-white leading-snug drop-shadow-md line-clamp-2">
                           {card.title}
                         </h3>
                       )}
                       {card.subtitle && (
-                        <p className="text-[9.5px] sm:text-[10.5px] text-white/80 line-clamp-2 leading-relaxed font-normal">
+                        <p className="text-[10px] sm:text-[11px] text-slate-200 line-clamp-2 sm:line-clamp-3 leading-relaxed font-normal">
                           {card.subtitle}
                         </p>
                       )}
                       {isCenter && (
-                        <div className="mt-1 pt-1 border-t border-white/20 flex items-center justify-between text-[8.5px] font-mono text-[#92FF5F]">
-                          <span>Standard #0{index + 1}</span>
-                          <span className="font-bold text-white uppercase tracking-wider">Active</span>
+                        <div className="mt-1.5 pt-1.5 border-t border-amber-500/30 flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-amber-400">
+                          <span className="font-bold">STANDARD #0{index + 1}</span>
+                          <span className="font-black px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 uppercase tracking-widest text-[8px]">ACTIVE</span>
                         </div>
                       )}
                     </div>
@@ -388,7 +430,7 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                 href={card.linkUrl}
                 target={card.linkUrl.startsWith("http") ? "_blank" : "_self"}
                 rel="noopener noreferrer"
-                className="fan-card absolute inset-0 m-auto w-[125px] h-[175px] sm:w-[145px] sm:h-[200px] md:w-[165px] md:h-[230px] lg:w-[185px] lg:h-[255px] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xl border-2 border-white/90 bg-[#0F3B27] select-none block"
+                className="fan-card"
               >
                 {cardContent}
               </a>
@@ -396,7 +438,7 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
               <div
                 key={card.id || index}
                 onClick={() => goToCard(index)}
-                className="fan-card absolute inset-0 m-auto w-[125px] h-[175px] sm:w-[145px] sm:h-[200px] md:w-[165px] md:h-[230px] lg:w-[185px] lg:h-[255px] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-xl border-2 border-white/90 bg-[#0F3B27] select-none block"
+                className="fan-card"
                 title={`Click to view Standard #${index + 1}`}
               >
                 {cardContent}
@@ -404,14 +446,33 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
             );
           })}
         </div>
+
+        {/* Floating Side Right Arrow */}
+        {needsPagination && (
+          <button
+            onClick={() => cycle("right")}
+            className={`${ARROW_CLASSES} hidden sm:flex absolute right-2 sm:right-4 md:right-8 w-11 h-11 sm:w-12 sm:h-12 z-40`}
+            aria-label="Next standard"
+            title="Next standard"
+          >
+            {chevron("right")}
+          </button>
+        )}
       </div>
 
+      {/* Prominent Bottom Control Bar with Active Indicators & Buttons */}
       {needsPagination && (
-        <div className="flex items-center justify-center gap-3 mt-4 md:mt-6 z-30">
-          <button className={`${ARROW_CLASSES} w-9 h-9 md:w-10 md:h-10`} onClick={() => cycle("left")} aria-label="Previous standard">
+        <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8 z-30">
+          <button
+            className={`${ARROW_CLASSES} w-11 h-11 sm:w-12 sm:h-12`}
+            onClick={() => cycle("left")}
+            aria-label="Previous standard"
+          >
             {chevron("left")}
           </button>
-          <div className="flex items-center gap-1.5">
+          
+          {/* Active Dots Navigation Indicator */}
+          <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0B192C] border border-amber-500/30 shadow-md">
             {cards.map((_, i) => (
               <button
                 key={i}
@@ -419,13 +480,18 @@ export default function CardFanCarousel({ cards }: CardFanCarouselProps) {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`transition-all duration-300 rounded-full cursor-pointer ${
                   i === centerIndex
-                    ? "w-5 h-2 bg-[#0F3B27] dark:bg-[#92FF5F]"
-                    : "w-2 h-2 bg-[#0F3B27]/25 dark:bg-white/25 hover:bg-[#0F3B27]/50"
+                    ? "w-6 h-2.5 bg-gradient-to-r from-amber-400 to-amber-500 shadow-[0_0_10px_#F59E0B]"
+                    : "w-2.5 h-2.5 bg-white/20 hover:bg-amber-400/60"
                 }`}
               />
             ))}
           </div>
-          <button className={`${ARROW_CLASSES} w-9 h-9 md:w-10 md:h-10`} onClick={() => cycle("right")} aria-label="Next standard">
+
+          <button
+            className={`${ARROW_CLASSES} w-11 h-11 sm:w-12 sm:h-12`}
+            onClick={() => cycle("right")}
+            aria-label="Next standard"
+          >
             {chevron("right")}
           </button>
         </div>

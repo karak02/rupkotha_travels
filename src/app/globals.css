@@ -2,16 +2,19 @@
 @source "../**";
 
 @theme {
-  --color-brand-dark: #0f3b27;
-  --color-brand-darker: #082015;
-  --color-brand-surface: #144d34;
-  --color-brand-lime: #92ff5f;
-  --color-brand-light: #f7f9f7;
-  --color-brand-orange: #ff7036;
-  --color-brand-ice: #bff2f0;
-  --color-brand-mint: #cff1d2;
-  --color-brand-muted: #52796f;
-  --color-brand-text: #0f3b27;
+  --color-brand-dark: #0b192c;
+  --color-brand-darker: #060d17;
+  --color-brand-surface: #1e3e62;
+  --color-brand-lime: #f59e0b;
+  --color-brand-gold: #f59e0b;
+  --color-brand-amber: #f59e0b;
+  --color-brand-sand: #fef3c7;
+  --color-brand-light: #f8f9fa;
+  --color-brand-orange: #f59e0b;
+  --color-brand-ice: #f1f5f9;
+  --color-brand-mint: #fef3c7;
+  --color-brand-muted: #64748b;
+  --color-brand-text: #0b192c;
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -52,48 +55,49 @@
 }
 
 :root {
-  --background: 120 14% 97%;
-  --foreground: 153 59% 15%;
+  --background: 210 20% 98%;
+  --foreground: 217 60% 11%;
 
   --card: 0 0% 100%;
-  --card-foreground: 153 59% 15%;
+  --card-foreground: 217 60% 11%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 153 59% 15%;
+  --popover-foreground: 217 60% 11%;
 
-  --primary: 153 59% 15%;
-  --primary-foreground: 101 100% 68%;
+  --primary: 217 60% 11%;
+  --primary-foreground: 38 92% 50%;
 
-  --secondary: 125 54% 88%;
-  --secondary-foreground: 153 59% 15%;
+  --secondary: 214 53% 25%;
+  --secondary-foreground: 0 0% 98%;
 
-  --muted: 153 20% 92%;
-  --muted-foreground: 165 19% 38%;
+  --muted: 210 20% 94%;
+  --muted-foreground: 215 16% 47%;
 
-  --accent: 101 100% 68%;
-  --accent-foreground: 153 59% 15%;
+  --accent: 38 92% 50%;
+  --accent-foreground: 217 60% 11%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 153 25% 85%;
-  --input: 153 25% 85%;
-  --ring: 101 100% 68%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 38 92% 50%;
 
   --radius: 0.75rem;
 
-  --bg-light: #f7f9f7;
-  --bg-dark: #0f3b27;
-  --bg-darker: #082015;
-  --color-lime: #92ff5f;
+  --bg-light: #f8f9fa;
+  --bg-dark: #0b192c;
+  --bg-darker: #060d17;
+  --color-lime: #f59e0b;
+  --color-gold: #f59e0b;
   --color-orange: #ff7036;
-  --color-ice: #bff2f0;
-  --color-mint: #cff1d2;
+  --color-ice: #f1f5f9;
+  --color-mint: #fef3c7;
 }
 
 body {
-  background-color: #f7f9f7;
-  color: #0f3b27;
+  background-color: #f8f9fa;
+  color: #0b192c;
   overflow-x: hidden;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -105,51 +109,56 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f7f9f7;
+  background: #0b192c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f3b27;
+  background: #1e3e62;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #92ff5f;
+  background: #f59e0b;
 }
 
 /* Bento Card Presets */
 .bento-card-light {
   background: #ffffff;
-  color: #0f3b27;
-  border: 1px solid rgba(15, 59, 39, 0.1);
-  box-shadow: 0 10px 30px -10px rgba(15, 59, 39, 0.08);
+  color: #0b192c;
+  border: 1px solid rgba(11, 25, 44, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(11, 25, 44, 0.06);
 }
 
 .bento-card-mint {
-  background: #cff1d2;
-  color: #0f3b27;
-  border: 1px solid rgba(15, 59, 39, 0.15);
+  background: #fef3c7;
+  color: #0b192c;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 .bento-card-ice {
-  background: #bff2f0;
-  color: #0f3b27;
-  border: 1px solid rgba(15, 59, 39, 0.15);
+  background: #f1f5f9;
+  color: #0b192c;
+  border: 1px solid rgba(11, 25, 44, 0.1);
 }
 
 .bento-card-dark {
-  background: #0f3b27;
-  color: #f7f9f7;
-  border: 1px solid rgba(146, 255, 95, 0.2);
+  background: #0b192c;
+  color: #f8f9fa;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 .bento-card-darker {
-  background: #082015;
-  color: #f7f9f7;
-  border: 1px solid rgba(191, 242, 240, 0.15);
+  background: #060d17;
+  color: #f8f9fa;
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .lime-pill {
-  background-color: #92ff5f;
-  color: #0f3b27;
+  background-color: #f59e0b;
+  color: #060d17;
+}
+
+.gold-pill {
+  background-color: #f59e0b;
+  color: #060d17;
 }
 
 .orange-pill {
@@ -163,27 +172,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 16rem;
+  height: 20rem;
   width: 100%;
 }
 @media (min-width: 640px) {
   .fan-layout {
-    height: 18rem;
+    height: 22.5rem;
   }
 }
 @media (min-width: 768px) {
   .fan-layout {
-    height: 20rem;
+    height: 25.5rem;
   }
 }
 @media (min-width: 1024px) {
   .fan-layout {
-    height: 22rem;
+    height: 28rem;
   }
 }
 @media (min-width: 1280px) {
   .fan-layout {
-    height: 24rem;
+    height: 30rem;
   }
 }
 
@@ -194,13 +203,13 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  width: 8rem;
-  height: 11.5rem;
-  border-radius: 1rem;
+  width: 10.5rem;
+  height: 15rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 12px 24px -6px rgba(15, 59, 39, 0.35);
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  background-color: #0f3b27;
+  box-shadow: 0 16px 36px -6px rgba(6, 13, 23, 0.5), 0 0 20px rgba(245, 158, 11, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background-color: #0b192c;
   cursor: pointer;
   transform-origin: center bottom;
   will-change: transform, opacity;
@@ -208,31 +217,31 @@ body {
 }
 @media (min-width: 640px) {
   .fan-card {
-    width: 10rem;
-    height: 14rem;
-    border-radius: 1.15rem;
+    width: 12.5rem;
+    height: 17.5rem;
+    border-radius: 1.35rem;
   }
 }
 @media (min-width: 768px) {
   .fan-card {
-    width: 11.5rem;
-    height: 16rem;
-    border-radius: 1.25rem;
+    width: 14.5rem;
+    height: 20.5rem;
+    border-radius: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
   .fan-card {
-    width: 13rem;
-    height: 18rem;
-    border-radius: 1.35rem;
+    width: 16.5rem;
+    height: 23rem;
+    border-radius: 1.65rem;
     border-width: 2.5px;
   }
 }
 @media (min-width: 1280px) {
   .fan-card {
-    width: 14.5rem;
-    height: 20rem;
-    border-radius: 1.5rem;
-    border-width: 2.5px;
+    width: 18.5rem;
+    height: 25.5rem;
+    border-radius: 1.75rem;
+    border-width: 3px;
   }
 }
