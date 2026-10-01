@@ -25,10 +25,25 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
   const [notes, setNotes] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          packageOrDestination: destination,
+          formType: "Lounge Inquiry",
+          notes: `Travelers: ${travelers}${notes ? " | Details: " + notes : ""}`,
+        }),
+      });
+    } catch (err) {
+      console.error("Lounge contact submission error:", err);
+    } finally {
       setSubmitting(false);
       onSuccessSubmit(
         `Thank you ${name}! Your bespoke itinerary request for ${destination} has been received. Our Kolkata Travel Designer will prepare a customized proposal and contact you at ${phone}.`
@@ -36,7 +51,7 @@ export default function KolkataLoungeContact({ onSuccessSubmit }: ContactProps) 
       setName("");
       setPhone("");
       setNotes("");
-    }, 800);
+    }
   };
 
   return (

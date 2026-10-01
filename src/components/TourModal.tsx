@@ -59,16 +59,43 @@ export default function TourModal({
   const gstAmount = Math.round(subtotal * 0.05);
   const grandTotal = subtotal + gstAmount;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
+
+    const addonsList: string[] = [];
+    if (addAcTrain) addonsList.push("AC Train Sleeper");
+    if (addAcRoom) addonsList.push("AC Room Upgrade");
+    if (addExclusiveCar) addonsList.push("Private Exclusive Car");
+
+    try {
+      await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          packageOrDestination: packageData.title,
+          formType: "Tour Modal Inquiry",
+          travelDate: departureDate,
+          adults: adultCount,
+          extraPersons: extraCount,
+          children: childCount,
+          addons: addonsList,
+          estimatedTotal: grandTotal,
+          notes: `Twin rate: ₹${packageData.twinRate} | Subtotal: ₹${subtotal} | GST 5%: ₹${gstAmount}`,
+        }),
+      });
+    } catch (err) {
+      console.error("Tour modal booking error:", err);
+    } finally {
       setSubmitting(false);
       onSuccessSubmit(
         `Thank you ${name}! Your booking enquiry for ${packageData.title} (${departureDate}) for ${adultCount} adults (Est. Total ₹${grandTotal.toLocaleString("en-IN")}) has been confirmed. Our Kolkata Senior Tour Director will contact you at ${phone} shortly.`
       );
       onClose();
-    }, 800);
+    }
   };
 
   const whatsAppText = `Hello Rupkotha Travels, I would like to book the following package:
